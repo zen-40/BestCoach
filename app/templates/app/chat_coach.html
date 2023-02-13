@@ -1,0 +1,146 @@
+{% load static %}
+<!doctype html>
+<html lang="en" data-theme="dark">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="dark light">
+    <title>General Information | Clever Admin Dashboard Template</title>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!-- Utilities -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/utilities.css' %}">
+  </head>
+  
+  <body>
+    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+      <!-- Sidebar -->
+      {% include "app/basic/navbar.html" %}
+      <!-- Content -->
+      <div class="flex-lg-1 h-screen overflow-y-lg-auto">
+        <!-- Navbar -->
+        <header class="top-0 overlap-10 bg-surface-primary border-bottom">
+          <div class="container-fluid py-4">
+            <div class="row align-items-center">
+              <div class="col">
+                <div class="d-flex align-items-center gap-4">
+                  <div><button type="button" class="btn-close text-xs" aria-label="Close"></button></div>
+                  <div class="vr opacity-20 my-1"></div> 
+                  <h1 class="h3 ls-tight">👋 Welcome Michael!</h1>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="hstack gap-2 justify-content-end">
+                  <a href="#!" class="text-sm text-muted text-primary-hover font-semibold me-2 d-none d-md-block"><i class="bi bi-question-circle-fill"></i>
+                    <span class="d-none d-sm-inline ms-2">Need help?</span>
+                  </a>
+                  <button type="button" class="btn btn-sm btn-dark border-base d-none d-md-block"><span>Log out</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header> 
+        
+        <!-- Main -->
+        <main class="py-6 bg-surface-secondary">
+          <div class="container-fluid max-w-screen-sm vstack gap-6">
+            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="mb-3">Question to the trainer</h5>
+                <textarea class="form-control mb-4" id="exampleFormControlTextarea1" rows="3" placeholder="Enter content message..."></textarea>
+                <a href="#" class="btn btn-primary btn-sm">Send message <i class="bi bi-send-check"></i></a>
+              </div>
+            </div>
+            
+            
+    <div class="row d-flex justify-content-center">
+      <div class="col-12">
+
+        <div class="card" style="border:2px solid #e6e6e6;">
+          <div class="card-header d-flex justify-content-between align-items-center p-3">
+            <h5 class="mb-0">Chat messages</h5>
+            <div class="d-flex flex-row align-items-center">
+              <span class="badge bg-primary text-white me-3">20</span>
+              <i class="fas fa-minus me-3 text-muted fa-xs"></i>
+              <i class="fas fa-comments me-3 text-muted fa-xs"></i>
+              <i class="fas fa-times text-muted fa-xs"></i>
+            </div>
+          </div>
+          <div class="card-body" data-mdb-perfect-scrollbar="true" style="position: relative; height: 400px">
+
+            <div class="d-flex justify-content-between">
+              <p class="small mb-1">Timona Siera</p>
+              <p class="small mb-1 text-muted">23 Jan 2:00 pm</p>
+            </div>
+            <div class="d-flex flex-row justify-content-start">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
+                alt="avatar 1" style="width: 45px; height: 100%;">
+              <div>
+                <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">For what reason
+                  would it
+                  be advisable for me to think about business content?</p>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <p class="small mb-1 text-muted">23 Jan 2:05 pm</p>
+              <p class="small mb-1">Johny Bullock</p>
+            </div>
+            <div class="d-flex flex-row justify-content-end mb-4 pt-1">
+              <div>
+                <p class="small p-2 me-3 mb-3 text-white rounded-3 bg-primary text-white">Thank you for your believe in
+                  our
+                  supports</p>
+              </div>
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                alt="avatar 1" style="width: 45px; height: 100%;">
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <p class="small mb-1">Timona Siera</p>
+              <p class="small mb-1 text-muted">23 Jan 5:37 pm</p>
+            </div>
+            <div class="d-flex flex-row justify-content-start">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
+                alt="avatar 1" style="width: 45px; height: 100%;">
+              <div>
+                <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">Lorem ipsum dolor
+                  sit amet
+                  consectetur adipisicing elit similique quae consequatur</p>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <p class="small mb-1 text-muted">23 Jan 6:10 pm</p>
+              <p class="small mb-1">Johny Bullock</p>
+            </div>
+            <div class="d-flex flex-row justify-content-end mb-4 pt-1">
+              <div>
+                <p class="small p-2 me-3 mb-3 text-white rounded-3 bg-primary text-white">Dolorum quasi voluptates quas
+                  amet in
+                  repellendus perspiciatis fugiat</p>
+              </div>
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                alt="avatar 1" style="width: 45px; height: 100%;">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+            
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+  
+</html>

@@ -1,0 +1,183 @@
+{% load static %}
+<!doctype html>
+<html lang="en" data-theme="dark">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="dark light">
+    <title>General Information | Clever Admin Dashboard Template</title>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!-- Utilities -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/utilities.css' %}">
+  </head>
+  
+  <body>
+    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+      <!-- Sidebar -->
+      {% include "app/basic/navbar.html" %}
+      <!-- Content -->
+      <div class="flex-lg-1 h-screen overflow-y-lg-auto">
+        <!-- Main -->
+        <main class="py-6 bg-surface-secondary">
+          <div class="container-fluid max-w-screen-sm vstack gap-6"> 
+            
+          <!-- Profile picture -->
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div>
+                  <div class="d-flex align-items-center">
+                    <div class="ms-0">
+                      <span class="h4 d-block mb-0">Body progress</span>
+                      <a href="#" class="text-sm font-semibold text-muted">Add a new item in the list</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-auto">
+                  <button type="button" class="btn btn-sm btn-primary">Add new <i class="bi bi-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card" style="border:2px solid #e6e6e6;">
+            <div class="card-body pb-0">
+              <div class="mb-4">
+                <h4 class="mb-1">Added by me</h4>
+                <p class="text-sm text-muted">
+                  Below you can see the history of the body transofrmation.
+                </p>
+              </div>
+              <div class="row g-3">
+                <div class="col-lg-8">
+                  <div class="input-group input-group-sm input-group-inline mb-1">
+                    <span class="input-group-text">
+                      <i class="bi bi-search"></i>
+                    </span>
+                    <input type="email" class="form-control" placeholder="Select date">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <select class="form-select form-select-sm">
+                    <option value="member">Sort by</option>
+                    <option value="owner">Date</option>
+                    <option value="owner">Name</option>
+                  </select>
+                </div>
+              </div>
+              <div class="list-group list-group-flush">
+                {% for obj in query %}
+                <div class="list-group-item d-flex align-items-center">
+                  <div class="me-4">
+                    <div>
+                      <img alt="..." src="{{ obj.profile_pictures.url }}" class="rounded-2" style="width: 58px;">
+                    </div>
+                  </div>
+                  <div class="flex-fill">
+                    <!-- Title -->
+                    <a href="#" class="d-block h6 font-semibold mb-0">Posted {{ obj.created_at|timesince }}</a>
+                    <!-- Subtitle -->
+                     <span class="d-block text-sm text-muted">Weight <span class="badge badge-pill bg-soft-primary text-primary">{{ obj.body_weight }} lb <i class="bi bi-arrow-up"></i></span></span>
+                    <span class="d-block text-sm text-muted">Biceps 39.5 | Chest 122.0 | Legs - | Waist 87.0</span>
+                  </div>
+                  <div class="ms-auto text-end">
+                    <div class="dropdown">
+                      <a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu">
+                        <a href="#!" class="dropdown-item">
+                          Edit
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Preview
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Delete
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+                <div class="list-group-item d-flex align-items-center">
+                  <div class="me-4">
+                    <div>
+                      <img alt="..." src="{% static 'img/people/img-3.jpg' %}" class="rounded-2" style="width: 58px;">
+                    </div>
+                  </div>
+                  <div class="flex-fill">
+                    <!-- Title -->
+                    <a href="#" class="d-block h6 font-semibold mb-0">Posted 6 days</a>
+                    <!-- Subtitle -->
+                     <span class="d-block text-sm text-muted">Weight <span class="badge badge-pill bg-soft-primary text-primary">88,4 lb <i class="bi bi-arrow-up"></i></span></span>
+                    <span class="d-block text-sm text-muted">Biceps 39.5 | Chest 122.0 | Legs - | Waist 87.0</span>
+                  </div>
+                  <div class="ms-auto text-end">
+                    <div class="dropdown">
+                      <a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu">
+                        <a href="#!" class="dropdown-item">
+                          Edit
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Preview
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Delete
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item d-flex align-items-center">
+                  <div class="me-4">
+                    <div>
+                      <img alt="..." src="{% static 'img/people/img-3.jpg' %}" class="rounded-2" style="width: 58px;">
+                    </div>
+                  </div>
+                  <div class="flex-fill">
+                    <!-- Title -->
+                    <a href="#" class="d-block h6 font-semibold mb-0">Posted 6 days</a>
+                    <!-- Subtitle -->
+                     <span class="d-block text-sm text-muted">Weight <span class="badge badge-pill bg-soft-primary text-primary">88,4 lb <i class="bi bi-arrow-up"></i></span></span>
+                    <span class="d-block text-sm text-muted">Biceps 39.5 | Chest 122.0 | Legs - | Waist 87.0</span>
+                  </div>
+                  <div class="ms-auto text-end">
+                    <div class="dropdown">
+                      <a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu">
+                        <a href="#!" class="dropdown-item">
+                          Edit
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Preview
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Delete
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+  
+</html>
