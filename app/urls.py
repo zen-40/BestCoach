@@ -11,8 +11,11 @@ urlpatterns = [
     path('diet/', views.diet, name='diet'),
     path('training/', views.training, name='training'),
     path('chat-coach/', views.chat_coach, name='chat_coach'),
-    path('notifications/', views.notifications, name='notifications'),
-    path('settings-and-payments/', views.settings_and_payment, name='settings_and_payment'),
+    #settigs
+    path('settings/general/', views.settings_general, name='settings_general'),
+    path('settings/billing/', views.settings_billing, name='settings_billing'),
+    path('settings/security/', views.settings_security, name='settings_security'),
+    path('settings/notifications/', views.settings_notifications, name='settings_notifications'),
 ]
 
 

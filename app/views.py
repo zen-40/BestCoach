@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import BodyProgress
+from .models import BodyProgress, Meal
 
 
 def home(request):
@@ -16,7 +16,10 @@ def body_progress(request):
 
 
 def diet(request):
-    return render(request, 'app/diet.html')
+    query = Meal.objects.all()
+
+    context = {'query': query}
+    return render(request, 'app/diet.html', context)
 
 
 
@@ -30,10 +33,31 @@ def chat_coach(request):
 
 
 
-def notifications(request):
-    return render(request, 'app/notifications.html')
+def settings_general(request):
+    activation_tab = 1
+
+    context = {'activation_tab': activation_tab}
+    return render(request, 'app/settings_general.html', context)
+
+
+def settings_billing(request):
+    activation_tab = 2
+
+    context = {'activation_tab': activation_tab}
+    return render(request, 'app/settings_billing.html', context)
 
 
 
-def settings_and_payment(request):
-    return render(request, 'app/settings_and_payment.html')
+def settings_security(request):
+    activation_tab = 3
+
+    context = {'activation_tab': activation_tab}
+    return render(request, 'app/settings_security.html', context)
+
+
+def settings_notifications(request):
+    activation_tab = 4
+
+    context = {'activation_tab': activation_tab}
+    return render(request, 'app/settings_notifications.html', context)
+

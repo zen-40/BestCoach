@@ -1,0 +1,209 @@
+{% load static %}
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="dark light">
+    <title>General Information | Clever Admin Dashboard Template</title>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!-- Utilities -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/utilities.css' %}">
+  </head>
+  
+<body>
+  <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+    <!-- Sidebar -->
+    {% include "app/basic/navbar.html" %}
+    <!-- Content -->
+    <div class="flex-lg-1 h-screen overflow-y-lg-auto">
+      <!-- Navbar -->
+      {% include "app/basic/settings_header.html" %}
+      
+      <!-- Main -->
+      <main class="py-6 bg-surface-secondary">
+        <div class="container-fluid max-w-screen-md vstack gap-6">
+          <!-- Notification checks -->
+          <div class="card">
+            <div class="card-header">
+              <h4 class="mb-1">General Notifications</h4>
+              <p class="text-sm text-muted">By filling your data you get a much better experience using our website.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <!-- Header -->
+              <li class="list-group-item px-6 d-flex align-items-center border-top">
+                <div class="col-6">
+                  <span class="text-xs ls-wide font-semibold text-uppercase text-muted">Type</span>
+                </div>
+                <div class="col-2">
+                  <span class="text-xs ls-wide font-semibold text-uppercase text-muted">Call</span>
+                </div>
+                <div class="col-2">
+                  <span class="text-xs ls-wide font-semibold text-uppercase text-muted">Email</span>
+                </div>
+                <div class="col-2">
+                  <span class="text-xs ls-wide font-semibold text-uppercase text-muted">SMS</span>
+                </div>
+              </li>
+              <!-- Rows -->
+              <li class="list-group-item px-6 d-flex align-items-center">
+                <div class="col-6">
+                  <h6 class="font-semibold">API Limits</h6>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkApi1" checked>
+                    <label class="form-check-label" for="checkApi1"></label>
+                  </div>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkApi2">
+                    <label class="form-check-label" for="checkApi2"></label>
+                  </div>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkApi3" checked>
+                    <label class="form-check-label" for="checkApi3"></label>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item px-6 d-flex align-items-center">
+                <div class="col-6">
+                  <h6 class="font-semibold">Reminders</h6>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkReminders1">
+                    <label class="form-check-label" for="checkReminders1"></label>
+                  </div>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkReminders2" checked>
+                    <label class="form-check-label" for="checkReminders2"></label>
+                  </div>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkReminders3" checked>
+                    <label class="form-check-label" for="checkReminders3"></label>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item px-6 d-flex align-items-center">
+                <div class="col-6">
+                  <h6 class="font-semibold">Storage</h6>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkStorage1" checked>
+                    <label class="form-check-label" for="checkStorage1"></label>
+                  </div>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkStorage2">
+                    <label class="form-check-label" for="checkStorage2"></label>
+                  </div>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkStorage3">
+                    <label class="form-check-label" for="checkStorage3"></label>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item px-6 d-flex align-items-center">
+                <div class="col-6">
+                  <h6 class="font-semibold">Security</h6>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkSecurity1" checked>
+                    <label class="form-check-label" for="checkSecurity1"></label>
+                  </div>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkSecurity2" checked>
+                    <label class="form-check-label" for="checkSecurity2"></label>
+                  </div>
+                </div>
+                <div class="col-2 text-lg">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkSecurity3" checked>
+                    <label class="form-check-label" for="checkSecurity3"></label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Indifidual switch cards -->
+          <div class="row g-6">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="mb-2">Sales and promotions</h5>
+                  <p class="text-sm text-muted mb-6">
+                    We only notify with sales and promotions.
+                  </p>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" checked>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="mb-2">Special promotions</h5>
+                  <p class="text-sm text-muted mb-6">
+                    We only notify with sales and promotions.
+                  </p>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="mb-2">Weekly suggestions</h5>
+                  <p class="text-sm text-muted mb-6">
+                    We only notify with sales and promotions.
+                  </p>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="mb-2">Outlet</h5>
+                  <p class="text-sm text-muted mb-6">
+                    We only notify with sales and promotions.
+                  </p>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" checked>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

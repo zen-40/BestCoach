@@ -14,10 +14,50 @@ class BodyProgress(models.Model):
     img = ProcessedImageField(upload_to='user-images',
                               processors=[ResizeToFit(1920, 1920)],
                               format='JPEG',
-                              options={'quality': 100},
-                              blank=True, null=True)
+                              options={'quality': 100})
     profile_pictures = ImageSpecField(source='img',
                                       processors=[ResizeToFill(65, 65)],
                                       format='JPEG',
-                                      options={'quality': 80})
+                                      options={'quality': 100})
     created_at = models.DateTimeField()
+
+
+
+class Meal(models.Model):
+    name = models.CharField(max_length=200)
+    time = models.CharField(max_length=200)
+    more = models.CharField(max_length=200)
+    img = ProcessedImageField(upload_to='user-images',
+                              processors=[ResizeToFit(1920, 1920)],
+                              format='JPEG',
+                              options={'quality': 100})
+    profile_pictures = ImageSpecField(source='img',
+                                      processors=[ResizeToFill(80, 80)],
+                                      format='JPEG',
+                                      options={'quality': 100})
+
+
+
+class Training(models.Model):
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+
+
+class Exercise(models.Model):
+    name = models.CharField(max_length=200)
+    img = ProcessedImageField(upload_to='user-images',
+                              processors=[ResizeToFit(1920, 1920)],
+                              format='JPEG',
+                              options={'quality': 100},
+                              blank=True, null=True)
+    profile_pictures = ImageSpecField(source='img',
+                                      processors=[ResizeToFill(80, 80)],
+                                      format='JPEG',
+                                      options={'quality': 100})
+    sets = models.CharField(max_length=200)
+    repeats = models.CharField(max_length=200)
+
+
+
+class ChatSample(models.Model):
+    content = models.TextField()

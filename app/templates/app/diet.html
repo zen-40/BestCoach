@@ -21,6 +21,10 @@
       {% include "app/basic/navbar.html" %}
       <!-- Content -->
       <div class="flex-lg-1 h-screen overflow-y-lg-auto">
+      
+        <!-- Navbar -->
+        {% include "app/basic/header.html" %}
+      
         <!-- Main -->
         <main class="py-6 bg-surface-secondary">
           <div class="container-fluid max-w-screen-sm vstack gap-6"> 
@@ -34,12 +38,12 @@
                   <!-- Title -->
                   <h6 class="h5 font-semibold mb-1">Caloric needs</h6>
                   <!-- Text -->
-                  <p class="text-sm text-muted">Your caloric and energy needs.</p>
+                  <p class="text-sm text-muted">Number calories you need in one day.</p>
                 </div>
                 <div class="ms-auto">
                   <div class="d-flex align-items-center mt-5 mb-3 lh-none  text-heading d-block display-5 ls-tight mb-0">
                     <span class="font-semibold text-2xl align-self-start mt-1 mt-sm-1 me-1">kcal</span>
-                    <span>2600</span>
+                    <span>2150</span>
                     <span class="d-inline-block font-regular text-muted text-lg mt-sm-3 ms-1"> / 3100</span>
                   </div>
                 </div>
@@ -47,7 +51,7 @@
               <!-- Progress -->
               <div class="d-flex align-items-center justify-content-between mb-1">
                 <span class="text-sm text-muted font-semibold text-heading d-block">Consumed today</span>
-                <span class="text-sm text-muted font-semibold d-block">78% daily requirement</span>
+                <span class="text-sm text-muted font-semibold d-block">67% daily requirement</span>
               </div>
               <div class="progress progress-sm shadow-none mb-6">
                 <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
@@ -66,25 +70,30 @@
               <div class="d-flex align-items-center justify-content-between mb-5">
                 <div class="flex-1">
                   <!-- Title -->
-                  <h4 class="mb-1">Today's Nutrition Plan</h4>
+                  <h4 class="mb-1">Today's nutrition plan</h4>
                   <!-- Text -->
                   <p class="text-sm text-muted">This is your today's nutrition plan.</p>
                 </div>
               </div>
+              {% for obj in query %}
               <div class="p-3 border border-dashed rounded-2 d-flex align-items-center mb-2">
                 <div>
-                  <img alt="..." src="{% static 'img/300x300/1.jpg' %}" class="w-20 rounded-2">
+                  <img alt="..." src="{{ obj.profile_pictures.url }}" class="w-20 rounded-2">
                 </div>
                 <div class="ms-4 flex-fill">
-                  <div class="d-block text-sm text-heading font-semibold mb-1">Classic bacon and eggs</div>
+                  <div class="d-block text-sm text-heading font-semibold mb-1">{{ obj.name }}</div>
                   <div class="d-block text-sm text-muted mb-1">
-                    Time eat: 7 a.m. 
+                    {{ obj.time }}
                   </div>
                   <div class="d-block text-sm text-muted">
-                    Enerfy: 548 kcal (B21/T32/W31)
+                    {{ obj.more }}
                   </div>
                 </div>
               </div>
+              {% endfor %}
+              
+              <!-- Sample template -->
+              <!--
               <div class="p-3 border border-dashed rounded-2 d-flex align-items-center mb-2">
                 <div>
                   <img alt="..." src="{% static 'img/300x300/2.jpg' %}" class="w-20 rounded-2">
@@ -98,66 +107,11 @@
                     Enerfy: 548 kcal (B21/T32/W31)
                   </div>
                 </div>
-              </div>
-              <div class="p-3 border border-dashed rounded-2 d-flex align-items-center mb-2">
-                <div>
-                  <img alt="..." src="{% static 'img/300x300/3.jpg' %}" class="w-20 rounded-2">
-                </div>
-                <div class="ms-4 flex-fill">
-                  <div class="d-block text-sm text-heading font-semibold mb-1">Classic bacon and eggs</div>
-                  <div class="d-block text-sm text-muted mb-1">
-                    Time eat: 7 a.m. 
-                  </div>
-                  <div class="d-block text-sm text-muted">
-                    Enerfy: 548 kcal (B21/T32/W31)
-                  </div>
-                </div>
-              </div>
-              <div class="p-3 border border-dashed rounded-2 d-flex align-items-center mb-2">
-                <div>
-                  <img alt="..." src="{% static 'img/300x300/4.jpg' %}" class="w-20 rounded-2">
-                </div>
-                <div class="ms-4 flex-fill">
-                  <div class="d-block text-sm text-heading font-semibold mb-1">Classic bacon and eggs</div>
-                  <div class="d-block text-sm text-muted mb-1">
-                    Time eat: 7 a.m. 
-                  </div>
-                  <div class="d-block text-sm text-muted">
-                    Enerfy: 548 kcal (B21/T32/W31)
-                  </div>
-                </div>
-              </div>
-              <div class="p-3 border border-dashed rounded-2 d-flex align-items-center mb-2">
-                <div>
-                  <img alt="..." src="{% static 'img/300x300/5.jpg' %}" class="w-20 rounded-2">
-                </div>
-                <div class="ms-4 flex-fill">
-                  <div class="d-block text-sm text-heading font-semibold mb-1">Classic bacon and eggs</div>
-                  <div class="d-block text-sm text-muted mb-1">
-                    Time eat: 7 a.m. 
-                  </div>
-                  <div class="d-block text-sm text-muted">
-                    Enerfy: 548 kcal (B21/T32/W31)
-                  </div>
-                </div>
-              </div>
-              <div class="p-3 border border-dashed rounded-2 d-flex align-items-center mb-2">
-                <div>
-                  <img alt="..." src="{% static 'img/300x300/6.jpg' %}" class="w-20 rounded-2">
-                </div>
-                <div class="ms-4 flex-fill">
-                  <div class="d-block text-sm text-heading font-semibold mb-1">Classic bacon and eggs</div>
-                  <div class="d-block text-sm text-muted mb-1">
-                    Time eat: 7 a.m. 
-                  </div>
-                  <div class="d-block text-sm text-muted">
-                    Enerfy: 548 kcal (B21/T32/W31)
-                  </div>
-                </div>
-              </div>
+              </div> -->
+              
               <div class="d-flex align-items-center justify-content-between pt-4">
                 <a href="#" class="text-muted text-danger-hover text-sm font-semibold">Have question?</a>
-                <a href="#" class="btn btn-sm btn-neutral">Products you need</a>
+                <a href="#" class="btn btn-sm btn-neutral">Shopping list</a>
               </div>
             </div>
           </div>
