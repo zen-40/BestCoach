@@ -21,6 +21,9 @@ class BodyProgress(models.Model):
                                       options={'quality': 100})
     created_at = models.DateTimeField()
 
+    class Meta:
+        ordering = ['-created_at']
+
 
 
 class Meal(models.Model):

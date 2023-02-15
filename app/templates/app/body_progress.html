@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
     <!-- Utilities -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/utilities.css' %}">
+    <!-- libs -->
+    <link rel="stylesheet" href="{% static 'libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
   </head>
   
   <body>
@@ -78,7 +80,9 @@
                 <div class="list-group-item d-flex align-items-center">
                   <div class="me-4">
                     <div>
-                      <img alt="..." src="{{ obj.profile_pictures.url }}" class="rounded-2" style="width: 58px;">
+                      <a href="{{ obj.img.url }}" data-fancybox="group">
+                        <img alt="..." src="{{ obj.profile_pictures.url }}" class="rounded-2" style="width: 58px;">
+                      </a>
                     </div>
                   </div>
                   <div class="flex-fill">
@@ -152,6 +156,9 @@
       </div>
     </div>
     <script src="{% static 'js/main.js' %}"></script>
+    <!-- libs -->
+    <script src="{% static 'libs/jquery/jquery-3.6.3.min.js' %}"></script>
+    <script src="{% static 'libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"></script>
   </body>
   
 </html>
