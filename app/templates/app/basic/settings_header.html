@@ -6,7 +6,7 @@
         <div class="col-sm-6 col-12">
           <!-- Title -->
           <h1 class="h2 ls-tight">
-            Account settings
+            {{ template_name }}
           </h1>
         </div>
         <!-- Actions -->
@@ -19,10 +19,10 @@
           <a href="{% url 'app:settings_general' %}" class="nav-link {% if activation_tab == 1 %}active{% endif %}">General</a>
         </li>
         <li class="nav-item">
-          <a href="{% url 'app:settings_billing' %}" class="nav-link {% if activation_tab == 2 %}active{% endif %}">Billing</a>
+          <a href="#" class="nav-link {% if activation_tab == 2 %}active{% endif %}" data-bs-toggle="modal" data-bs-target="#testVersionModal">Billing</a>
         </li>
         <li class="nav-item">
-          <a href="{% url 'app:settings_security' %}" class="nav-link {% if activation_tab == 3 %}active{% endif %}">Security</a>
+          <a href="#" class="nav-link {% if activation_tab == 3 %}active{% endif %}" data-bs-toggle="modal" data-bs-target="#testVersionModal">Security</a>
         </li>
         <li class="nav-item">
           <a href="{% url 'app:settings_notifications' %}" class="nav-link {% if activation_tab == 4 %}active{% endif %}">Notifications</a>

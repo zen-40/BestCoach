@@ -31,9 +31,9 @@
           <div class="card">
             <div class="card-body">
               <div class="mb-5">
-                <h4 class="mb-1">Your team's name</h4>
+                <h4 class="mb-1">Basic account information</h4>
                 <p class="text-sm text-muted">
-                  This is your team's visible name within Clever.
+                  Photo, first name, last name, cover photo, and other account details.
                 </p>
               </div>
               <form class="vstack gap-5">
@@ -41,7 +41,7 @@
                   <label class="form-label">Photo</label>
                   <div class="d-flex align-items-center">
                     <a href="#" class="avatar avatar-lg bg-warning rounded-circle text-white">
-                      <img alt="..." src="/img/logos/clever-primary-sm.svg">
+                      <img alt="..." src="{% static 'img/avatars/user_basic_img.jpg' %}">
                     </a>
                     <div class="ms-5">
                       <label for="file-upload" class="btn btn-sm btn-neutral">
@@ -59,7 +59,7 @@
                 </div>
                 <div>
                   <label class="form-label">Team name</label>
-                  <input type="text" class="form-control" value="Clever Team">
+                  <input type="text" class="form-control" value="Alexander Smith">
                 </div>
                 <div class="hstack gap-2 justify-content-end">
                   <button type="button" class="btn btn-sm btn-neutral">Cancel</button>
@@ -71,45 +71,43 @@
           <div class="card">
             <div class="card-body">
               <div class="mb-5">
-                <h4 class="mb-1">Team URL</h4>
+                <h4 class="mb-1">Background image</h4>
                 <p class="text-sm text-muted">
-                  This is your team’s URL namespace on Clever.
+                  Change your cover photo on your user profile.
                 </p>
               </div>
               <form class="vstack gap-5">
                 <div>
                   <div class="input-group position-relative">
-                    <span class="input-group-text">clever.io/</span>
-                    <input type="email" class="form-control" placeholder="username">
+                    <span class="input-group-text">Select photo <i class="bi bi-camera-fill ms-2"></i></span>
+                    <input type="email" class="form-control" placeholder="/files/my_bg_image.png">
                   </div>
                 </div>
                 <div class="hstack gap-2 justify-content-end">
-                  <button type="button" class="btn btn-sm btn-neutral">Cancel</button>
+                  <button type="button" class="btn d-inline-flex btn-sm btn-neutral ms-2 text-danger">Remove</button>
                   <button type="submit" class="btn btn-sm btn-primary">Save</button>
                 </div>
               </form>
             </div>
           </div>
+          
           <div class="card">
             <div class="card-body">
               <div class="mb-5">
-                <h4 class="mb-1">Members</h4>
+                <h4 class="mb-1">Email addresses</h4>
                 <p class="text-sm text-muted">
-                  Manage and invite Team Members.
+                  Email addresses for notifications and email contact.
                 </p>
               </div>
               <form class="vstack gap-5">
                 <div class="row gx-3 gy-5">
-                  <div class="col-md-8">
+                  <div class="col-md-10">
                     <label class="form-label">Email address</label>
-                    <input type="email" class="form-control">
+                    <input type="email" class="form-control" value="alexander_smith@gmail.com">
                   </div>
-                  <div class="col-md-4">
-                    <label class="form-label">Role</label>
-                    <select class="form-select">
-                      <option value="member">Member</option>
-                      <option value="owner">Owner</option>
-                    </select>
+                  <div class="col-md-2">
+                    <label class="form-label">Action</label>
+                    <button type="button" class="btn d-inline-flex btn-neutral text-danger">Remove</button>
                   </div>
                 </div>
                 <div>
@@ -119,135 +117,45 @@
                   </button>
                 </div>
                 <div class="hstack gap-2 justify-content-end">
-                  <button type="submit" class="btn btn-sm btn-primary">Invite</button>
+                  <button type="submit" class="btn btn-sm btn-primary">Save</button>
                 </div>
               </form>
             </div>
           </div>
           
           <div class="card">
-            <div class="card-body pb-0">
-              <div class="mb-4">
-                <h4 class="mb-1">Manage access</h4>
+            <div class="card-body">
+              <div class="mb-5">
+                <h4 class="mb-1">Phone numbers</h4>
                 <p class="text-sm text-muted">
-                  Manage and invite Team Members.
+                  Telephone numbers for contact and SMS notifications.
                 </p>
               </div>
-              <div class="row g-3">
-                <div class="col-lg-8">
-                  <div class="input-group input-group-sm input-group-inline mb-1">
-                    <span class="input-group-text">
-                      <i class="bi bi-search"></i>
-                    </span>
-                    <input type="email" class="form-control" placeholder="Search members">
+              <form class="vstack gap-5">
+                <div class="row gx-3 gy-5">
+                  <div class="col-md-10">
+                    <label class="form-label">Phone number</label>
+                    <input type="email" class="form-control" value="+1 (352) 462 4327">
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-label">Action</label>
+                    <button type="button" class="btn d-inline-flex btn-neutral text-danger">Remove</button>
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <select class="form-select form-select-sm">
-                    <option value="member">Role</option>
-                    <option value="owner">Date</option>
-                    <option value="owner">Name</option>
-                  </select>
+                <div>
+                  <button class="btn btn-sm btn-neutral d-flex align-items-center">
+                    <i class="bi bi-plus-circle me-2"></i>
+                    <span>Add more</span>
+                  </button>
                 </div>
-              </div>
-              <div class="list-group list-group-flush">
-                <div class="list-group-item d-flex align-items-center">
-                  <div class="me-4">
-                    <div class="avatar w-10 h-10 rounded-circle">
-                      <img alt="..." src="/img/people/img-3.jpg">
-                    </div>
-                  </div>
-                  <div class="flex-fill">
-                    <!-- Title -->
-                    <a href="#" class="d-block h6 font-semibold mb-1">Robert Fox</a>
-                    <!-- Subtitle -->
-                    <span class="d-block text-sm text-muted">robert.fox@example.com</span>
-                  </div>
-                  <div class="ms-auto text-end">
-                    <div class="dropdown">
-                      <a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="bi bi-three-dots-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu">
-                        <a href="#!" class="dropdown-item">
-                          Action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Another action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                <div class="hstack gap-2 justify-content-end">
+                  <button type="submit" class="btn btn-sm btn-primary">Save</button>
                 </div>
-                <div class="list-group-item d-flex align-items-center">
-                  <div class="me-4">
-                    <div class="avatar w-10 h-10 rounded-circle">
-                      <img alt="..." src="/img/people/img-1.jpg">
-                    </div>
-                  </div>
-                  <div class="flex-fill">
-                    <!-- Title -->
-                    <a href="#" class="d-block h6 font-semibold mb-1">Darlene Robertson</a>
-                    <!-- Subtitle -->
-                    <span class="d-block text-sm text-muted">darlene@example.com</span>
-                  </div>
-                  <div class="ms-auto text-end">
-                    <div class="dropdown">
-                      <a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="bi bi-three-dots-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu">
-                        <a href="#!" class="dropdown-item">
-                          Action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Another action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="list-group-item d-flex align-items-center">
-                  <div class="me-4">
-                    <div class="avatar w-10 h-10 rounded-circle">
-                      <img alt="..." src="/img/people/img-2.jpg">
-                    </div>
-                  </div>
-                  <div class="flex-fill">
-                    <!-- Title -->
-                    <a href="#" class="d-block h6 font-semibold mb-1">Theresa Webb</a>
-                    <!-- Subtitle -->
-                    <span class="d-block text-sm text-muted">theresa.webb@example.com</span>
-                  </div>
-                  <div class="ms-auto text-end">
-                    <div class="dropdown">
-                      <a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="bi bi-three-dots-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu">
-                        <a href="#!" class="dropdown-item">
-                          Action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Another action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </form>
+              
             </div>
           </div>
-        
+          
         </div>
       </main>
     </div>
