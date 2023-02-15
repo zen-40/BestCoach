@@ -21,6 +21,8 @@
       {% include "app/basic/navbar.html" %}
       <!-- Content -->
       <div class="flex-lg-1 h-screen overflow-y-lg-auto">
+      
+        {% include "app/basic/header.html" %}
 
         <!-- Main -->
         <main class="py-6 bg-surface-secondary">
@@ -112,6 +114,10 @@
         </main>
       </div>
     </div>
+    
+    <!-- TEST MODAL -->
+    {% include "app/basic/modal_test_version.html" %}
+    
     <script src="{% static 'js/main.js' %}"></script>
   </body>
   

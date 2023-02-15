@@ -3,6 +3,7 @@ from .models import BodyProgress, Meal
 
 
 def home(request):
+    label = 'Home page'
     return render(request, 'app/home.html')
 
 

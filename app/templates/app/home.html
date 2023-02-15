@@ -46,32 +46,12 @@
       <!-- Content -->
       <div class="flex-lg-1 h-screen overflow-y-lg-auto">
         
+        {% include "app/basic/header.html" %}
+        
         <!-- Main -->
         <main class="py-6 bg-surface-secondary">
           <div class="container-fluid max-w-screen-sm vstack gap-6">
             <!-- Profile picture -->
-            
-            <!--
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex align-items-center">
-                <div>
-                  <div class="d-flex align-items-center">
-                    <a href="#" class="avatar avatar-lg bg-warning rounded-circle text-white">
-                      <img alt="..." src="{% static 'img/people/img-profile.jpg' %}">
-                    </a>
-                    <div class="ms-4">
-                      <span class="h4 d-block mb-0">Tahlia Mooney</span>
-                      <a href="#" class="text-sm font-semibold text-muted">View Profile</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="ms-auto">
-                  <button type="button" class="btn btn-sm btn-neutral">Upload</button>
-                </div>
-              </div>
-            </div>
-          </div> -->
             
             <!-- Column -->
             <div class="card" style="border-top: 4px solid #5c60f5;">
@@ -80,21 +60,21 @@
                 <div class="pro-img"><img src="{% static 'img/avatars/user_basic_img.jpg' %}" alt="user" class="img-thumbnail"></div>
                 <h3 class="m-b-0">Alexander Smith</h3>
                 <p class="mb-4">Champions train, losers complain 💪</p>
-                <!--
+                
                 <div class="row text-center m-t-20">
-                    <div class="col-lg-4 col-md-4 m-t-20">
-                        <h3 class="m-b-0 font-light">0/<small>2300</small></h3>
-                        <span class="badge bg-soft-primary text-primary">Kcal</span>
-                    </div>
-                    <div class="col-lg-4 col-md-4 m-t-20">
-                        <h3 class="m-b-0 font-light">Waiting</h3>
-                        <span class="badge bg-soft-danger text-danger">Training</span>
-                    </div>
-                    <div class="col-lg-4 col-md-4 m-t-20">
-                        <h3 class="m-b-0 font-light">84 days</h3>
-                        <span class="badge bg-soft-warning text-warning">Good</span>
-                    </div>
-                </div> -->
+                  <div class="col-lg-4 col-md-4 m-t-20">
+                    <h3 class="m-b-0 font-light">0/<small>2300</small></h3>
+                    <span class="badge bg-soft-success text-success rounded-pill">Kcal</span>
+                  </div>
+                  <div class="col-lg-4 col-md-4 m-t-20">
+                    <h3 class="m-b-0 font-light">Waiting</h3>
+                    <span class="badge bg-soft-danger text-danger rounded-pill">Training</span>
+                  </div>
+                  <div class="col-lg-4 col-md-4 m-t-20">
+                    <h3 class="m-b-0 font-light">84 days</h3>
+                    <span class="badge bg-soft-warning text-warning rounded-pill">To goal</span>
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -173,6 +153,10 @@
         </main>
       </div>
     </div>
+    
+    <!-- TEST MODAL -->
+    {% include "app/basic/modal_test_version.html" %}
+    
     <script src="{% static 'js/main.js' %}"></script>
   </body>
   

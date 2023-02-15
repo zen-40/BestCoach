@@ -23,95 +23,97 @@
       {% include "app/basic/navbar.html" %}
       <!-- Content -->
       <div class="flex-lg-1 h-screen overflow-y-lg-auto">
-      
+        
+        {% include "app/basic/header.html" %}
+        
         <!-- Main -->
         <main class="py-6 bg-surface-secondary">
-          <div class="container-fluid max-w-screen-sm vstack gap-6"> 
+          <div class="container-fluid max-w-screen-sm vstack gap-6">
             
-          <!-- Profile picture -->
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex align-items-center">
-                <div>
-                  <div class="d-flex align-items-center">
-                    <div class="ms-0">
-                      <span class="h5 d-block mb-0">New body progress</span>
-                      <a href="#" class="text-sm text-muted">Add a new item to the timeline.</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="ms-auto">
-                  <button type="button" class="btn btn-sm btn-primary">Add new <i class="bi bi-plus"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card" style="border:2px solid #e6e6e6;">
-            <div class="card-body pb-0">
-              <div class="mb-4">
-                <h4 class="mb-1">Time line body progress</h4>
-                <p class="text-sm text-muted">
-                  Below you can see the history of the body transofrmation.
-                </p>
-              </div>
-              <div class="row g-3">
-                <div class="col-lg-8">
-                  <div class="input-group input-group-sm input-group-inline mb-1">
-                    <span class="input-group-text">
-                      <i class="bi bi-search"></i>
-                    </span>
-                    <input type="email" class="form-control" placeholder="The name of the training plan...">
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <select class="form-select form-select-sm">
-                    <option value="member">Sort by</option>
-                    <option value="owner">Latest</option>
-                    <option value="owner">Oldest</option>
-                  </select>
-                </div>
-              </div>
-              <div class="list-group list-group-flush">
-                {% for obj in query %}
-                <div class="list-group-item d-flex align-items-center">
-                  <div class="me-4">
-                    <div>
-                      <a href="{{ obj.img.url }}" data-fancybox="group">
-                        <img alt="..." src="{{ obj.profile_pictures.url }}" class="rounded-2" style="width: 58px;">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="flex-fill">
-                    <!-- Title -->
-                    <a href="#" class="d-block h6 font-semibold mb-0">Posted {{ obj.created_at|timesince }}</a>
-                    <!-- Subtitle -->
-                     <span class="d-block text-sm text-muted">Weight <span class="badge badge-pill bg-soft-primary text-primary">{{ obj.body_weight }} lb <i class="bi bi-arrow-up"></i></span></span>
-                    <span class="d-block text-sm text-muted">Biceps {{ obj.biceps }} | Chest {{ obj.chest }} | Legs {{ obj.legs }} | Waist {{ obj.waist }}</span>
-                  </div>
-                  <div class="ms-auto text-end">
-                    <div class="dropdown">
-                      <a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="bi bi-three-dots-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu">
-                        <a href="#!" class="dropdown-item">
-                          Edit
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Preview
-                        </a>
-                        <a href="#!" class="dropdown-item text-danger">
-                          Delete
-                        </a>
+            <!-- Profile picture -->
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="d-flex align-items-center">
+                      <div class="ms-0">
+                        <span class="h5 d-block mb-0">New body progress</span>
+                        <a href="#" class="text-sm text-muted">Add a new item to the timeline.</a>
                       </div>
                     </div>
                   </div>
+                  <div class="ms-auto">
+                    <button type="button" class="btn btn-sm btn-primary">Add new <i class="bi bi-plus"></i></button>
+                  </div>
                 </div>
-                {% endfor %}
-                
-                <!-- Sample template -->
-                <!--
+              </div>
+            </div>
+            
+            <div class="card" style="border:2px solid #e6e6e6;">
+              <div class="card-body pb-0">
+                <div class="mb-4">
+                  <h4 class="mb-1">Time line body progress</h4>
+                  <p class="text-sm text-muted">
+                    Below you can see the history of the body transofrmation.
+                  </p>
+                </div>
+                <div class="row g-3">
+                  <div class="col-lg-8">
+                    <div class="input-group input-group-sm input-group-inline mb-1">
+                      <span class="input-group-text">
+                        <i class="bi bi-search"></i>
+                      </span>
+                      <input type="email" class="form-control" placeholder="The name of the training plan...">
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <select class="form-select form-select-sm">
+                      <option value="member">Sort by</option>
+                      <option value="owner">Latest</option>
+                      <option value="owner">Oldest</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="list-group list-group-flush">
+                  {% for obj in query %}
+                  <div class="list-group-item d-flex align-items-center">
+                    <div class="me-4">
+                      <div>
+                        <a href="{{ obj.img.url }}" data-fancybox="group">
+                          <img alt="..." src="{{ obj.profile_pictures.url }}" class="rounded-2" style="width: 58px;">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="flex-fill">
+                      <!-- Title -->
+                      <a href="#" class="d-block h6 font-semibold mb-0">Posted {{ obj.created_at|timesince }}</a>
+                      <!-- Subtitle -->
+                      <span class="d-block text-sm text-muted">Weight <span class="badge badge-pill bg-soft-primary text-primary">{{ obj.body_weight }} lb <i class="bi bi-arrow-up"></i></span></span>
+                      <span class="d-block text-sm text-muted">Biceps {{ obj.biceps }} | Chest {{ obj.chest }} | Legs {{ obj.legs }} | Waist {{ obj.waist }}</span>
+                    </div>
+                    <div class="ms-auto text-end">
+                      <div class="dropdown">
+                        <a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                          <a href="#!" class="dropdown-item">
+                            Edit
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Preview
+                          </a>
+                          <a href="#!" class="dropdown-item text-danger">
+                            Delete
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                  
+                  <!-- Sample template -->
+                  <!--
                 <div class="list-group-item d-flex align-items-center">
                   <div class="me-4">
                     <div>
@@ -142,16 +144,20 @@
                     </div>
                   </div>
                 </div> -->
-                
+                  
+                </div>
               </div>
             </div>
-          </div>
-        
-          
+            
+            
           </div>
         </main>
       </div>
     </div>
+    
+    <!-- TEST MODAL -->
+    {% include "app/basic/modal_test_version.html" %}
+    
     <script src="{% static 'js/main.js' %}"></script>
     <!-- libs -->
     <script src="{% static 'libs/jquery/jquery-3.6.3.min.js' %}"></script>

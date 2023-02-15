@@ -22,6 +22,9 @@
     <!-- Content -->
     <div class="flex-lg-1 h-screen overflow-y-lg-auto">
       
+      <!-- Sidebar -->
+      {% include "app/basic/settings_header.html" %}
+      
       <!-- Main -->
       <main class="py-6 bg-surface-secondary">
         <div class="container-fluid max-w-screen-md vstack gap-6">
@@ -249,6 +252,10 @@
       </main>
     </div>
   </div>
+  
+    <!-- TEST MODAL -->
+    {% include "app/basic/modal_test_version.html" %}
+  
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 
