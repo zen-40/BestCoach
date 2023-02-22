@@ -59,7 +59,8 @@
               <div class="card-body little-profile text-center">
                 <div class="pro-img"><img src="{% static 'img/avatars/user_basic_img.jpg' %}" alt="user" class="img-thumbnail"></div>
                 <h3 class="m-b-0">Alexander Smith</h3>
-                <p class="mb-4">Champions train, losers complain 💪</p>
+                <p class="mb-1">Champions train, losers complain 💪</p>
+                <p class="mb-3"><span class="badge bg-primary text-white rounded-pill">To goal 89 days!</span></p>
                 
                 <!--
                 <div class="row text-center m-t-20">
@@ -131,7 +132,7 @@
                     
                     <!-- Mobile -->
                     <div class="d-lg-none">
-                      <a href="{% url 'app:diet' %}" class="h4 d-block my-1 stretched-link">Training</a>
+                      <a href="{% url 'app:training' %}" class="h4 d-block my-1 stretched-link">Training</a>
                     </div>
                     
                   </div>
@@ -159,7 +160,7 @@
                     
                     <!-- Mobile -->
                     <div class="d-lg-none">
-                      <a href="{% url 'app:diet' %}" class="h4 d-block my-1 stretched-link">Body</a>
+                      <a href="{% url 'app:body_progress' %}" class="h4 d-block my-1 stretched-link">Body</a>
                     </div>
                     
                   </div>
@@ -186,7 +187,7 @@
                     
                     <!-- Mobile -->
                     <div class="d-lg-none">
-                      <a href="{% url 'app:diet' %}" class="h4 d-block my-1 stretched-link">Talk</a>
+                      <a href="{% url 'app:chat_coach' %}" class="h4 d-block my-1 stretched-link">Talk</a>
                     </div>
                     
                   </div>
