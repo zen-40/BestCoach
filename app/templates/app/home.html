@@ -59,8 +59,10 @@
               <div class="card-body little-profile text-center">
                 <div class="pro-img"><img src="{% static 'img/avatars/user_basic_img.jpg' %}" alt="user" class="img-thumbnail"></div>
                 <h3 class="m-b-0">Alexander Smith</h3>
-                <p class="mb-4">Champions train, losers complain 💪</p>
+                <p class="mb-1">Champions train, losers complain 💪</p>
+                <p class="mb-3"><span class="badge bg-primary text-white rounded-pill">To goal 89 days!</span></p>
                 
+                <!--
                 <div class="row text-center m-t-20">
                   <div class="col-lg-4 col-md-4 m-t-20">
                     <h3 class="m-b-0 font-light">0/<small>2300</small></h3>
@@ -74,7 +76,7 @@
                     <h3 class="m-b-0 font-light">84 days</h3>
                     <span class="badge bg-soft-warning text-warning rounded-pill">To goal</span>
                   </div>
-                </div>
+                </div> -->
                 
               </div>
             </div>
@@ -93,23 +95,7 @@
                       Manage your diet and calories.
                     </p>
                     <p class="text-sm mb-6 mt-2">
-                      <span class="badge bg-soft-primary text-primary">Eaten today 2150 kcal</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-md-6">
-                <div class="card hovernow" style="border:2px solid #e6e6e6;">
-                  <div class="card-body text-center">
-                    <figure class="mx-auto">
-                      <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/2a.png' %}"></div>
-                    </figure><a href="{% url 'app:body_progress' %}" class="h4 d-block my-1 stretched-link">Body progress</a>
-                    <p class="text-sm text-muted mb-0">
-                      Body progress and silhouette.
-                    </p>
-                    <p class="text-sm mb-6 mt-2">
-                      <span class="badge bg-soft-primary text-primary">Updated 5 days ago</span>
+                      <span class="badge bg-soft-primary text-primary">Eaten today 2150 kcal</span> <!-- bg-soft-primary text-primary -->
                     </p>
                   </div>
                 </div>
@@ -126,6 +112,23 @@
                     </p>
                     <p class="text-sm mb-6 mt-2">
                       <span class="badge bg-soft-primary text-primary">Today training OFF</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="col-md-6">
+                <div class="card hovernow" style="border:2px solid #e6e6e6;">
+                  <div class="card-body text-center">
+                    <figure class="mx-auto">
+                      <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/2a.png' %}"></div>
+                    </figure><a href="{% url 'app:body_progress' %}" class="h4 d-block my-1 stretched-link">Body progress</a>
+                    <p class="text-sm text-muted mb-0">
+                      Body progress and silhouette.
+                    </p>
+                    <p class="text-sm mb-6 mt-2">
+                      <span class="badge bg-soft-primary text-primary">Updated 5 days ago</span>
                     </p>
                   </div>
                 </div>

@@ -57,8 +57,8 @@
               </div>
               <hr class="my-4" />
               <div class="d-flex align-items-center justify-content-between">
-                <a href="#" class="btn btn-sm btn-neutral">Consumption history</a>
-                <a href="#" class="btn btn-sm btn-primary">Open calculator <i class="bi bi-plus"></i></a>
+                <button type="button" class="btn btn-sm btn-neutral" data-bs-toggle="modal" data-bs-target="#testVersionModal">Consumption history</button>
+                <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#testVersionModal">Open calculator <i class="bi bi-plus"></i></button>
               </div>
             </div>
           </div>
@@ -82,10 +82,10 @@
                 <div class="ms-4 flex-fill">
                   <div class="d-block text-sm text-heading font-semibold mb-1">{{ obj.name }}</div>
                   <div class="d-block text-sm text-muted mb-1">
-                    {{ obj.time }}
+                    Eating time: {{ obj.time }}
                   </div>
                   <div class="d-block text-sm text-muted">
-                    {{ obj.more }}
+                    Energy: {{ obj.more }}
                   </div>
                 </div>
               </div>
@@ -109,8 +109,8 @@
               </div> -->
               
               <div class="d-flex align-items-center justify-content-between pt-4">
-                <a href="#" class="text-muted text-danger-hover text-sm font-semibold">Have question?</a>
-                <a href="#" class="btn btn-sm btn-neutral">Shopping list</a>
+                <a href="#" class="text-muted text-primary-hover text-sm font-semibold" data-bs-toggle="modal" data-bs-target="#testVersionModal">Have question?</a>
+                <button type="button" class="btn btn-sm btn-neutral" data-bs-toggle="modal" data-bs-target="#testVersionModal">Shopping list</button>
               </div>
             </div>
           </div>
