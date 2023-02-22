@@ -12,13 +12,13 @@ class BodyProgress(models.Model):
     waist = models.CharField(max_length=200)
     comments = models.CharField(max_length=200)
     img = ProcessedImageField(upload_to='user-images',
-                              processors=[ResizeToFit(1920, 1920)],
+                              processors=[ResizeToFit(980, 980)],
                               format='JPEG',
                               options={'quality': 100})
     profile_pictures = ImageSpecField(source='img',
                                       processors=[ResizeToFill(65, 65)],
                                       format='JPEG',
-                                      options={'quality': 100})
+                                      options={'quality': 80})
     created_at = models.DateTimeField()
 
     class Meta:
