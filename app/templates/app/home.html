@@ -89,13 +89,24 @@
                   <div class="card-body text-center">
                     <figure class="mx-auto">
                       <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/1a.png' %}"></div>
-                    </figure><a href="{% url 'app:diet' %}" class="h4 d-block my-1 stretched-link">Meal plans</a>
-                    <p class="text-sm text-muted mb-0 d-none d-lg-block">
-                      Manage your diet and calories.
-                    </p>
-                    <p class="text-sm mb-6 mt-2">
-                      <span class="badge bg-soft-primary text-primary">Eaten today 2150 kcal</span> <!-- bg-soft-primary text-primary -->
-                    </p>
+                    </figure>
+                    
+                    <!-- Desktop -->
+                    <div class="d-none d-lg-block">
+                      <a href="{% url 'app:diet' %}" class="h4 d-block my-1 stretched-link">Meal plans</a>
+                      <p class="text-sm text-muted mb-0">
+                        Manage your diet and calories.
+                      </p>
+                      <p class="text-sm mb-6 mt-2">
+                        <span class="badge bg-soft-primary text-primary">Eaten today 2150 kcal</span> <!-- bg-soft-primary text-primary -->
+                      </p>
+                    </div>
+                    
+                    <!-- Mobile -->
+                    <div class="d-lg-none">
+                      <a href="{% url 'app:diet' %}" class="h4 d-block my-1 stretched-link">Meals</a>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -105,13 +116,24 @@
                   <div class="card-body text-center">
                     <figure class="mx-auto">
                       <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/3a.png' %}"></div>
-                    </figure><a href="{% url 'app:training' %}" class="h4 d-block my-1 stretched-link">Training plan</a>
-                    <p class="text-sm text-muted mb-0 d-none d-lg-block">
-                      Training plan and exercises.
-                    </p>
-                    <p class="text-sm mb-6 mt-2">
-                      <span class="badge bg-soft-primary text-primary">Today training OFF</span>
-                    </p>
+                    </figure>
+                    
+                    <!-- Desktop -->
+                    <div class="d-none d-lg-block">
+                      <a href="{% url 'app:training' %}" class="h4 d-block my-1 stretched-link">Training plan</a>
+                      <p class="text-sm text-muted mb-0">
+                        Training plan and exercises.
+                      </p>
+                      <p class="text-sm mb-6 mt-2">
+                        <span class="badge bg-soft-primary text-primary">Today training OFF</span> <!-- bg-soft-primary text-primary -->
+                      </p>
+                    </div>
+                    
+                    <!-- Mobile -->
+                    <div class="d-lg-none">
+                      <a href="{% url 'app:diet' %}" class="h4 d-block my-1 stretched-link">Training</a>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -122,13 +144,24 @@
                   <div class="card-body text-center">
                     <figure class="mx-auto">
                       <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/2a.png' %}"></div>
-                    </figure><a href="{% url 'app:body_progress' %}" class="h4 d-block my-1 stretched-link">Body progress</a>
-                    <p class="text-sm text-muted mb-0 d-none d-lg-block">
-                      Body progress and silhouette.
-                    </p>
-                    <p class="text-sm mb-6 mt-2">
-                      <span class="badge bg-soft-primary text-primary">Updated 5 days ago</span>
-                    </p>
+                    </figure>
+                    
+                    <!-- Desktop -->
+                    <div class="d-none d-lg-block">
+                      <a href="{% url 'app:body_progress' %}" class="h4 d-block my-1 stretched-link">Body progress</a>
+                      <p class="text-sm text-muted mb-0">
+                        Body progress and silhouette.
+                      </p>
+                      <p class="text-sm mb-6 mt-2">
+                        <span class="badge bg-soft-primary text-primary">Updated 5 days ago</span><!-- bg-soft-primary text-primary -->
+                      </p>
+                    </div>
+                    
+                    <!-- Mobile -->
+                    <div class="d-lg-none">
+                      <a href="{% url 'app:diet' %}" class="h4 d-block my-1 stretched-link">Body</a>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -138,13 +171,24 @@
                   <div class="card-body text-center">
                     <figure class="mx-auto">
                       <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/4a.png' %}"></div>
-                    </figure><a href="{% url 'app:chat_coach' %}" class="h4 d-block my-1 stretched-link">Coach support</a>
-                    <p class="text-sm text-muted mb-0 d-none d-lg-block">
-                      Talk with your personal trainer.
-                    </p>
-                    <p class="text-sm mb-6 mt-2">
-                      <span class="badge bg-soft-primary text-primary">No new messages</span>
-                    </p>
+                    </figure>
+                    
+                    <!-- Desktop -->
+                    <div class="d-none d-lg-block">
+                      <a href="{% url 'app:chat_coach' %}" class="h4 d-block my-1 stretched-link">Coach support</a>
+                      <p class="text-sm text-muted mb-0">
+                        Talk with your personal trainer.
+                      </p>
+                      <p class="text-sm mb-6 mt-2">
+                        <span class="badge bg-soft-primary text-primary">No new messages</span><!-- bg-soft-primary text-primary -->
+                      </p>
+                    </div>
+                    
+                    <!-- Mobile -->
+                    <div class="d-lg-none">
+                      <a href="{% url 'app:diet' %}" class="h4 d-block my-1 stretched-link">Talk</a>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
