@@ -13,6 +13,15 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
     <!-- Utilities -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/utilities.css' %}">
+    <style>
+    .hovernow {
+      transition: box-shadow 0.3s ease-in-out;
+    }
+      
+    .hovernow:hover {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    }
+    </style>
   </head>
   
   <body>
@@ -75,7 +84,7 @@
                 </div>
               </div>
               {% for obj in query %}
-              <div class="p-3 border border-dashed rounded-2 d-flex align-items-center mb-2">
+              <div class="p-3 border border-dashed rounded-2 d-flex align-items-center mb-2 hovernow" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#testVersionModal">
                 <div>
                   <img alt="..." src="{{ obj.profile_pictures.url }}" class="w-20 rounded-2">
                 </div>
