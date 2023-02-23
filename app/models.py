@@ -16,7 +16,7 @@ class BodyProgress(models.Model):
                               format='JPEG',
                               options={'quality': 100})
     profile_pictures = ImageSpecField(source='img',
-                                      processors=[ResizeToFill(65, 65)],
+                                      processors=[ResizeToFill(250, 250)],
                                       format='JPEG',
                                       options={'quality': 80})
     created_at = models.DateTimeField()
