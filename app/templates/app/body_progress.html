@@ -131,36 +131,38 @@
             </div>
             
                 
-                  <div class="row g-6">
-                  {% for obj in query %}
+                  <div class="row g-6 d-lg-none">
                     <div class="col-12">
-                      <div class="card shadow-4-hover">
-                        <div class="card-body pb-5">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div><img alt="..." class="w-10 h-10 rounded-2" src="{{ obj.profile_pictures.url }}"></div>
-                            <div class="text-end">
-                              <div class="text-end">
-                                <button type="button" class="btn btn-sm btn-neutral rounded-pill" data-bs-toggle="modal" data-bs-target="#modalInstallApp">
-                                  <i class="bi bi-pencil-square"></i> <span> Manage element</span>
-                                </button>
+                      <div class="card h-full">
+                        <div class="card-body">
+                          <div class="card-title d-flex align-items-center">
+                            <h5 class="mb-0">Top Performance</h5>
+                            <div class="ms-auto text-end"><a href="#" class="text-sm font-semibold">Order by <i class="bi bi-funnel"></i></a></div>
+                          </div>
+                          <div class="list-group gap-4">
+                          {% for obj in query %}
+                            <div class="list-group-item d-flex align-items-center border rounded">
+                              <div class="me-4">
+                                <div class="avatar">
+                                  <a href="{{ obj.img.url }}" data-fancybox="groupMobile">
+                                    <img alt="..." src="{{ obj.profile_pictures.url }}">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="flex-fill">
+                                <a href="#" class="d-block h6 font-semibold mb-1">{{ obj.created_at|timesince }}</a>
+                              <span class="d-block text-sm text-muted">Weight <span class="badge badge-pill bg-soft-primary text-primary">{{ obj.body_weight }} lb <i class="bi bi-arrow-up"></i></span></span></div>
+                              <div class="ms-auto text-end">
+                                <div class="dropdown"><a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-three-dots-vertical"></i></a>
+                                  <div class="dropdown-menu"><a href="#!" class="dropdown-item">Action </a><a href="#!" class="dropdown-item">Another action </a><a href="#!" class="dropdown-item">Something else here</a></div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="mt-6">
-                            <h6 class="mb-2">Posted {{ obj.created_at|timesince }}</h6>
-<div class="d-flex gap-2 flex-wrap">
-  <a href="#" class="bg-white bg-opacity-20 bg-opacity-100-hover border rounded px-3 py-1 font-semibold text-heading text-xs">{{ obj.body_weight }} lb <i class="bi bi-arrow-up"></i></a>
-  <a href="#" class="bg-white bg-opacity-20 bg-opacity-100-hover border rounded px-3 py-1 font-semibold text-heading text-xs">Biceps {{ obj.biceps }}</a> 
-  <a href="#" class="bg-white bg-opacity-20 bg-opacity-100-hover border rounded px-3 py-1 font-semibold text-heading text-xs">Chest {{ obj.chest }}</a> 
-  <a href="#" class="bg-white bg-opacity-20 bg-opacity-100-hover border rounded px-3 py-1 font-semibold text-heading text-xs">Legs {{ obj.legs }}</a> 
-  <a href="#" class="bg-white bg-opacity-20 bg-opacity-100-hover border rounded px-3 py-1 font-semibold text-heading text-xs">Waist {{ obj.waist }}</a> 
-</div>
-
+                          {% endfor %}
                           </div>
                         </div>
                       </div>
                     </div>
-                  {% endfor %}
                   </div>
             
             
