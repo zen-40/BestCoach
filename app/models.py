@@ -38,6 +38,10 @@ class Meal(models.Model):
                                       processors=[ResizeToFill(80, 80)],
                                       format='JPEG',
                                       options={'quality': 100})
+    special_img = ImageSpecField(source='img',
+                                      processors=[ResizeToFill(585, 265)],
+                                      format='JPEG',
+                                      options={'quality': 100})
 
 
 

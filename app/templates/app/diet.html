@@ -46,7 +46,7 @@
                   <!-- Title -->
                   <h6 class="h5 font-semibold mb-1">Caloric needs</h6>
                   <!-- Text -->
-                  <p class="text-sm text-muted">Number calories you need in one day.</p>
+                  <p class="text-sm text-muted">Today you need:</p>
                 </div>
                 <div class="ms-auto">
                   <div class="d-flex align-items-center mt-5 mb-3 lh-none  text-heading d-block display-5 ls-tight mb-0">
@@ -66,64 +66,32 @@
               </div>
               <hr class="my-4" />
               <div class="d-flex align-items-center justify-content-between">
-                <button type="button" class="btn btn-sm btn-neutral" data-bs-toggle="modal" data-bs-target="#testVersionModal">Consumption history</button>
-                <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#testVersionModal">Open calculator <i class="bi bi-plus"></i></button>
+                <button type="button" class="btn btn-sm btn-neutral" data-bs-toggle="modal" data-bs-target="#testVersionModal">History</button>
+                <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#testVersionModal">Calculator</button>
               </div>
             </div>
           </div>
           
-          <div class="card" style="border:2px solid #e6e6e6;">
-            <div class="card-body pb-4">
-              <!-- Icon + Dropdown -->
-              <div class="d-flex align-items-center justify-content-between mb-5">
-                <div class="flex-1">
-                  <!-- Title -->
-                  <h4 class="mb-1">Today's nutrition plan</h4>
-                  <!-- Text -->
-                  <p class="text-sm text-muted">This is your today's nutrition plan.</p>
-                </div>
-              </div>
-              {% for obj in query %}
-              <div class="p-3 border border-dashed rounded-2 d-flex align-items-center mb-2 hovernow" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#testVersionModal">
-                <div>
-                  <img alt="..." src="{{ obj.profile_pictures.url }}" class="w-20 rounded-2">
-                </div>
-                <div class="ms-4 flex-fill">
-                  <div class="d-block text-sm text-heading font-semibold mb-1">{{ obj.name }}</div>
-                  <div class="d-block text-sm text-muted mb-1">
-                    Eating time: {{ obj.time }}
-                  </div>
-                  <!-- 
-                  <div class="d-block text-sm text-muted">
-                    Energy: {{ obj.more }}
-                  </div> -->
-                </div>
-              </div>
-              {% endfor %}
-              
-              <!-- Sample template -->
-              <!--
-              <div class="p-3 border border-dashed rounded-2 d-flex align-items-center mb-2">
-                <div>
-                  <img alt="..." src="{% static 'img/300x300/2.jpg' %}" class="w-20 rounded-2">
-                </div>
-                <div class="ms-4 flex-fill">
-                  <div class="d-block text-sm text-heading font-semibold mb-1">Classic bacon and eggs</div>
-                  <div class="d-block text-sm text-muted mb-1">
-                    Time eat: 7 a.m. 
-                  </div>
-                  <div class="d-block text-sm text-muted">
-                    Enerfy: 548 kcal (B21/T32/W31)
-                  </div>
-                </div>
-              </div> -->
-              
-              <div class="d-flex align-items-center justify-content-between pt-4">
-                <a href="#" class="text-muted text-primary-hover text-sm font-semibold" data-bs-toggle="modal" data-bs-target="#testVersionModal">Have question?</a>
-                <button type="button" class="btn btn-sm btn-neutral" data-bs-toggle="modal" data-bs-target="#testVersionModal">Shopping list</button>
-              </div>
-            </div>
-          </div>
+          {% for obj in query %}
+    <div class="card">
+<div class="card-body">
+  <div class="d-flex align-items-center mb-3">
+    <h5 class="me-auto">{{ obj.name }}</h5>
+    <div class="text-sm">
+      <span class="badge bg-soft-primary text-primary">{{ obj.time }} <i class="bi bi-clock ms-1"></i></span>
+    </div>
+  </div>
+  <div class="mb-5">
+    <img alt="..." class="rounded" src="{{ obj.special_img.url }}">
+  </div>
+  <p class="text-sm mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <div class="text-end">
+    <a href="#" class="bg-white bg-opacity-20 bg-opacity-100-hover border rounded px-3 py-1 font-semibold text-heading text-xs">{{ obj.more }}</a> 
+  </div>
+</div>
+
+    </div>
+          {% endfor %}
           
           </div>
         </main>
