@@ -12,9 +12,9 @@ class BodyProgress(models.Model):
     waist = models.CharField(max_length=200)
     comments = models.CharField(max_length=200)
     img = ProcessedImageField(upload_to='user-images',
-                              processors=[ResizeToFit(980, 980)],
+                              processors=[ResizeToFit(900, 900)],
                               format='JPEG',
-                              options={'quality': 100})
+                              options={'quality': 80})
     profile_pictures = ImageSpecField(source='img',
                                       processors=[ResizeToFill(250, 250)],
                                       format='JPEG',
