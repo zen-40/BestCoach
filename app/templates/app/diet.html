@@ -26,7 +26,7 @@
   </head>
   
   <body>
-    <div class="d-flex flex-column flex-lg-row h-lg-full">
+    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
       <!-- Sidebar -->
       {% include "app/basic/navbar.html" %}
       <!-- Content -->
@@ -35,7 +35,7 @@
         {% include "app/basic/header.html" %}
         
         <!-- Main -->
-        <main class="py-6">
+        <main class="py-6 bg-surface-secondary">
           <div class="container-fluid max-w-screen-sm vstack gap-6">
             
             <!-- Desktop card -->
@@ -74,7 +74,7 @@
             </div>
             
             <!-- Mobile card -->
-            <div class="card d-lg-none mt-7" style="border-top: 4px solid #448c74; border:2px solid #e6e6e6;">
+            <div class="card d-lg-none" style="border-top: 4px solid #5c60f5;">
               <div class="card-body py-4">
                 <!-- Icon + Dropdown -->
                 <div class="d-flex align-items-center justify-content-between mb-5">
@@ -98,12 +98,12 @@
                   <span class="text-sm text-muted font-semibold d-block">67% daily requirement</span>
                 </div>
                 <div class="progress progress-sm shadow-none mb-6">
-                  <div class="progress-bar " role="progressbar" style="width: 70%; background-color: #458c75 !important;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <hr class="my-4" />
                 <div class="d-flex align-items-center justify-content-between">
                   <button type="button" class="btn btn-sm btn-neutral" data-bs-toggle="modal" data-bs-target="#testVersionModal">History</button>
-                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#testVersionModal"  style="background-color: #458c75 !important;">Calculator <i class="bi bi-plus"></i></button>
+                  <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#testVersionModal">Calculator <i class="bi bi-plus"></i></button>
                 </div>
               </div>
             </div>
@@ -148,7 +148,7 @@
                   <div class="d-flex align-items-center mb-3">
                     <h5 class="me-auto">{{ obj.name }}</h5>
                     <div class="text-sm">
-                      <span class="badge bg-soft-success text-white ms-2" style="background-color: #458c75 !important;">{{ obj.time }} <i class="bi bi-clock ms-1"></i></span>
+                      <span class="badge bg-soft-primary text-primary ms-2">{{ obj.time }} <i class="bi bi-clock ms-1"></i></span>
                     </div>
                   </div>
                   <div class="mb-5">

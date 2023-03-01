@@ -39,13 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-    'coming_soon',
     'django.contrib.sites',
     # 3rd party
     'allauth',
     'allauth.account',
     'authentication',
     'imagekit',
+    'overview_app',
 ]
 
 MIDDLEWARE = [

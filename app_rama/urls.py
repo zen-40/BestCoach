@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('preview/', include('app.urls', namespace='app')),
-    path('', include('coming_soon.urls', namespace='coming_soon')),
     path('authentication/', include('authentication.urls', namespace='authentication')),
+    path('', include('overview_app.urls', namespace='overview_app')),
     path('accounts/', include('allauth.urls')),  # potrzebne do wysłania emaila
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
