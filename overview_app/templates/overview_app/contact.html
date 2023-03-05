@@ -1,0 +1,247 @@
+{% load static %}
+{% spaceless %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head> <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="BestCoach.app - Best application for personal trainers">
+    <meta name="keywords" content="BestCoach.app - Best application for personal trainers">
+    <meta name="author" content="BestCoach.app">
+    
+    
+    <!-- Favicon icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets_overview/images/favicon/icon.png' %}">
+   
+    
+    <!-- Libs CSS -->
+    <link href="{% static 'assets_overview/fonts/feather/feather.css' %}" rel="stylesheet">
+    <link href="{% static 'assets_overview/libs/bootstrap-icons/font/bootstrap-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets_overview/libs/@mdi/font/css/materialdesignicons.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets_overview/libs/simplebar/dist/simplebar.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets_overview/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+    
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'assets_overview/css/theme.min.css' %}">
+    <title>BestCoach.app - Contact </title>
+  </head>
+  
+  <body class="bg-white">
+
+  
+    <!-- Page content -->
+  <main>
+  
+      {% include "overview_app/basic/navbar.html" %}
+      
+  
+  <!-- Page Content -->
+  <section class="py-lg-15 py-10 bg-light mt-1">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-6  col-12 ">
+          <!-- caption-->
+          <h1 class="fw-bold mb-1 display-3">Contact us</h1>
+          <!-- para -->
+          <p class="mb-5 text-dark ">If you have any questions, please contact our team. We will be happy to answer all of them. If you want to arrange a presentation of the application, use the button in the upper right corner.</p>
+        </div>
+        <div class="col-md-6 col-12">
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="mt-n8">
+    <!-- container  -->
+    <div class="container">
+      <div class="card rounded-3 shadow-sm">
+        <div class="row">
+          <div class="col-md-4  col-12 border-end-md ">
+            <!-- features  -->
+            <div class=" border-bottom border-bottom-md-0 mb-3 mb-lg-0">
+              <div class="p-5">
+                <div class="mb-4">
+                  <img src="{% static 'assets_overview/images/icons/1.png' %}" class="rounded" alt="Cinque Terre" style="height: 47px;">
+                </div>
+                <!-- heading  -->
+                <h3 class="fw-semi-bold">E-mail contact <i class="bi bi-envelope-at"></i></h3>
+                <!-- para  -->
+                <p>If you have general questions for our team, please contact us via the email address below.</p>
+                <!-- button  -->
+                <a href="help-center-faq.html" class="link-primary fw-semi-bold">office@bestcoach.app</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4  col-12  border-end-md">
+            <!-- features  -->
+            <div class="border-bottom border-bottom-md-0 mb-3 mb-lg-0">
+              <div class="p-5">
+                <div class="mb-4">
+                  <img src="{% static 'assets_overview/images/icons/2.png' %}" class="rounded" alt="Cinque Terre" style="height: 47px;">
+                </div>
+                <!-- heading  -->
+                <h3 class="fw-semi-bold">Telephone contact
+                </h3>
+                <!-- para  -->
+                <p>If it is more convenient for you to talk by phone, please contact us via the phone number below.</p>
+                <!-- button  -->
+                <a href="help-center-guide.html" class="link-primary fw-semi-bold">+1 (352) 462 4327</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4  col-12">
+            <div>
+              <div class="p-5">
+                <div class="mb-4">
+                  <img src="{% static 'assets_overview/images/icons/3.png' %}" class="rounded" alt="Cinque Terre" style="height: 47px;">
+                </div>
+                <!-- heading  -->
+                <h3 class="fw-semi-bold">Technical questions</h3>
+                <!-- para  -->
+                <p>If you have questions about our algorithm or other technical questions, please contact us via the email below.</p>
+                <!-- button  -->
+                <a href="help-center-support.html" class="link-primary fw-semi-bold">technical-team@bestcoach.app</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- container  -->
+  <section class="py-lg-16 py-10">
+    <div class="container">
+      <div class="row">
+        <div class="offset-lg-2 col-lg-6  col-12">
+          <div class="mb-8 pe-lg-14">
+             <!-- heading  -->
+            <h2 class="pe-lg-12 mb-4 h1 fw-semi-bold">Contact form</h2>
+            <p class="lead">If you have any questions or just want to say hello, please write to us 📝</p>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="contactForm">
+        <div class="offset-lg-2 col-lg-8 col-12">
+        
+          {% if send %}
+          <div class="alert alert-success" role="alert">
+            <b>Done!</b> {{ send }}
+          </div>
+          {% endif %}
+          
+          <form method="POST" action="#contactForm">
+          {% csrf_token %}
+             <!-- accordions  -->
+            <div class="accordion accordion-flush" id="accordionExample">
+            
+              <div class="row">
+                <div class="col-md-6">
+                  {{ contact_form.name|as_crispy_field }}
+                </div>
+                <div class="col-md-6">
+                  {{ contact_form.surname|as_crispy_field }}
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  {{ contact_form.email|as_crispy_field }}
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  {{ contact_form.contact|as_crispy_field }}
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="btn btn-primary" type="submit" name="contactFormButton">Send message</button>
+                </div>
+              </div>
+              
+              <!-- Card  -->
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- container  -->
+  <section class="pb-lg-16 pb-10">
+    <div class="container">
+      <div class="row">
+        <div class="offset-lg-2 col-lg-4  col-12">
+          <div class="mb-8">
+            <h2 class="mb-0 h1 fw-semi-bold">Are you looking for something different?</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-lg-2 col-lg-8  col-12">
+          <div class="row">
+            <div class="col-md-6 col-12">
+               <!-- card  -->
+              <div class="card border mb-md-0 mb-4">
+                 <!-- card body  -->
+                <div class="card-body">
+                  <div class="mb-3">
+                    <img src="{% static 'assets_overview/images/icons/4.png' %}" class="rounded" alt="Cinque Terre" style="height: 55px;">
+                  </div>
+                   <!-- para  -->
+                  <h3 class="mb-2 fw-semi-bold">Features available</h3>
+                  <p>Jeżeli chcesz porównać portale z perspektywy swojej kategorii produktowej i innych parametrów naciśnij poniższy przycisk.</p>
+                     <!-- btn  -->
+                  <a href="{% url 'overview_app:functions' %}" class="btn btn-primary btn-sm">See the functionalities <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+               <!-- card  -->
+              <div class="card border">
+                 <!-- card body  -->
+                <div class="card-body">
+                  <div class="mb-3">
+                    <img src="{% static 'assets_overview/images/icons/5.png' %}" class="rounded" alt="Cinque Terre" style="height: 55px;">
+                  </div>
+                   <!-- para  -->
+                  <h3 class="mb-2 fw-semi-bold">Application preview</h3>
+                  <p>Podoba Ci się to co robimy lub znalazłeś idealny portal przez naszą stronę internetową, okaż naszemu zespołowi wsparcie.</p>
+                     <!-- btn  -->
+                  <a href="{% url 'app:home' %}" class="btn btn-outline-secondary btn-sm">Live app preview <i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  
+    <!-- Footer -->
+    <!-- footer -->
+    {% include "overview_app/basic/footer.html" %}
+    
+    
+    <!-- Scripts -->
+    <!-- Libs JS -->
+    <script src="{% static 'assets_overview/libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/simplebar/dist/simplebar.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+    
+    
+    <!-- Theme JS -->
+    <script src="{% static 'assets_overview/js/theme.min.js' %}"></script>
+    
+    
+  </body>
+  
+</html>
+{% endspaceless %}

@@ -35,11 +35,13 @@
               <div class="card-body">
                 
                 <!--- Desktop -->
+                <div class="d-none d-lg-block">
                 <h5 class="mb-3">New body progress</h5>
                 <p class="text-sm lh-relaxed mb-4">
                   Add a new item to the timeline.
                 </p>
                 <button type="button" class="btn btn-primary btn-sm"  data-bs-toggle="modal" data-bs-target="#testVersionModal">Add new <i class="bi bi-plus"></i></button>
+                </div>
                 
                 <!-- Mobile -->
                 <div class="d-lg-none">
@@ -125,35 +127,27 @@
                 
                   <div class="row g-6 d-lg-none">
                     <div class="col-12">
-                      <div class="card h-full">
-                        <div class="card-body">
-                          <div class="card-title d-flex align-items-center">
-                            <h5 class="mb-0">Top Performance</h5>
-                            <div class="ms-auto text-end"><a href="#" class="text-sm font-semibold">Order by <i class="bi bi-funnel"></i></a></div>
-                          </div>
-                          <div class="list-group gap-4">
                           {% for obj in query %}
-                            <div class="list-group-item d-flex align-items-center border rounded">
-                              <div class="me-4">
-                                <div class="avatar avatar-lg">
-                                  <a href="{{ obj.img.url }}" data-fancybox="groupMobile">
-                                    <img alt="..." src="{{ obj.profile_pictures.url }}" class="rounded">
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="flex-fill">
-                                <a href="#" class="d-block h6 font-semibold mb-1">{{ obj.created_at|timesince }}</a>
-                              <span class="d-block text-sm text-muted">Weight <span class="badge badge-pill bg-soft-primary text-primary">{{ obj.body_weight }} lb <i class="bi bi-arrow-up"></i></span></span></div>
-                              <div class="ms-auto text-end">
-                                <div class="dropdown"><a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-three-dots-vertical"></i></a>
-                                  <div class="dropdown-menu"><a href="#!" class="dropdown-item">Action </a><a href="#!" class="dropdown-item">Another action </a><a href="#!" class="dropdown-item">Something else here</a></div>
+                            <div class="col-12 mb-3">
+                              <div class="card">
+                                <div class="card-body">
+                                  <div class="row">
+                                    <div class="col-4">
+                                      <a href="{{ obj.img.url }}" data-fancybox="groupMobile">
+                                        <img alt="..." src="{{ obj.profile_pictures_rectangle.url }}" class="img-fluid rounded">
+                                      </a>
+                                    </div>
+                                    <div class="col-8">
+                                      <a href="#" class="d-block h6 font-semibold mb-3">Posted {{ obj.created_at|timesince }}</a>
+                      <!-- Subtitle -->
+                      <span class="d-block text-sm text-muted mb-2">Weight <span class="badge badge-pill bg-soft-primary text-primary">{{ obj.body_weight }} lb <i class="bi bi-arrow-up"></i></span></span>
+                      <span class="d-block text-sm text-muted">Biceps {{ obj.biceps }} | Chest {{ obj.chest }} | Legs {{ obj.legs }} | Waist {{ obj.waist }}</span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           {% endfor %}
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
             

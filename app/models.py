@@ -19,6 +19,10 @@ class BodyProgress(models.Model):
                                       processors=[ResizeToFill(250, 250)],
                                       format='JPEG',
                                       options={'quality': 80})
+    profile_pictures_rectangle = ImageSpecField(source='img',
+                                      processors=[ResizeToFill(300, 350)],
+                                      format='JPEG',
+                                      options={'quality': 80})
     created_at = models.DateTimeField()
 
     class Meta:
@@ -39,7 +43,7 @@ class Meal(models.Model):
                                       format='JPEG',
                                       options={'quality': 100})
     special_img = ImageSpecField(source='img',
-                                      processors=[ResizeToFill(585, 265)],
+                                      processors=[ResizeToFill(585, 320)],
                                       format='JPEG',
                                       options={'quality': 100})
 

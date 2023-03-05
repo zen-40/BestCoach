@@ -1,0 +1,249 @@
+{% spaceless %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head> <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="BestCoach.app - Best application for personal trainers">
+    <meta name="keywords" content="BestCoach.app - Best application for personal trainers">
+    <meta name="author" content="BestCoach.app">
+    
+    
+    <!-- Favicon icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets_overview/images/favicon/icon.png' %}">
+    
+    
+    <!-- Libs CSS -->
+    <link href="{% static 'assets_overview/fonts/feather/feather.css' %}" rel="stylesheet">
+    <link href="{% static 'assets_overview/libs/bootstrap-icons/font/bootstrap-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets_overview/libs/@mdi/font/css/materialdesignicons.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets_overview/libs/simplebar/dist/simplebar.min.css' %}" rel="stylesheet">
+    
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'assets_overview/css/theme.min.css' %}">
+    <title>BestCoach.app - Vote for news </title>
+  </head>
+  
+  <body class="bg-white">
+    <!-- Page content -->
+    <main>
+      {% include "overview_app/basic/navbar.html" %}
+      <!-- Modal -->
+      <div class="modal fade" id="categoriesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Wybierz kategorie</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row mb-2">
+                
+                
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij <i class="far fa-times-circle"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Page Content -->
+      <section class="container">
+        <div class="row bg-light">
+          <!-- col -->
+          <div class="col-lg-6 col-md-12 col-12  bg-white">
+            <div class="me-2">
+              
+              <h1 class="display-4 fw-bold mt-5">Miejsce w rankingu</h1>
+              <p class="lead text-dark">
+                Publikacja odbędzie się już za parę dni!
+              </p>
+              <div class="mt-6 mt-5 mb-7">
+                
+                <div class="mb-3 col-12 col-md-12">
+                  <h4>Wybierz miejsce w rankingu, jakie chcesz uzyskać:</h4>
+                </div>
+                
+                <!-- form group -->
+                <div class="mb-3 col-12 col-md-12">
+                  <div class="card bg-light" style="border:2px solid #DBDBDB; cursor: pointer;">
+                    <div class=" py-3 ms-3 me-3 mb-0 mt-2">
+                      <h4 class="mn-0">1 miejsce w rankingu ‍🥇 <span class="badge bg-dark rounded-pill ml-1">Twoja rezerwacja - oczekuje</span> </h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- form group -->
+                
+                <!-- form group -->
+                <div class="mb-3 col-12 col-md-12">
+                  <div class="card hovernow" style="border:2px solid #DBDBDB; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    <div class="py-3 ms-3 me-3 mb-0 mt-2">
+                      <h4 class="mn-0">2 miejsce w rankingu 🥈‍
+                        
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- form group -->
+                
+                <!-- form group -->
+                <div class="mb-3 col-12 col-md-12">
+                  <div class="card hovernow" style="border:2px solid #DBDBDB; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    <div class="py-3 ms-3 me-3 mb-0 mt-2">
+                      <h4 class="mn-0">2 miejsce w rankingu 🥈‍
+                        
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- form group -->
+                
+                <!-- form group -->
+                <div class="mb-3 col-12 col-md-12">
+                  <div class="card hovernow" style="border:2px solid #DBDBDB; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    <div class="py-3 ms-3 me-3 mb-0 mt-2">
+                      <h4 class="mn-0">2 miejsce w rankingu 🥈‍
+                        
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- form group -->
+                
+                <!-- form group -->
+                <div class="mb-3 col-12 col-md-12">
+                  <div class="card hovernow" style="border:2px solid #DBDBDB; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                    <div class="py-3 ms-3 me-3 mb-0 mt-2">
+                      <h4 class="mn-0">5 miejsce w rankingu‍ 🏆
+                        
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- form group -->
+                
+                <!-- form group -->
+                <div class="mb-3 col-12 col-md-12">
+                  <div class="card bg-light" style="border:2px solid #DBDBDB; cursor: pointer;">
+                    <div class=" py-3 ms-3 me-3 mb-0 mt-2">
+                      <h4 class="mn-0">1 miejsce w rankingu ‍🥇 <span class="badge bg-dark rounded-pill ml-1">Twoja rezerwacja - oczekuje</span> </h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- form group -->
+                
+                
+                <!-- form group -->
+                <div class="mb-3 col-12 col-md-12">
+                  <div class="card bg-light" style="border:2px solid #DBDBDB; cursor: pointer;">
+                    <div class=" py-3 ms-3 me-3 mb-0 mt-2">
+                      <h4 class="mn-0">1 miejsce w rankingu ‍🥇 <span class="badge bg-dark rounded-pill ml-1">Twoja rezerwacja - oczekuje</span> </h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- form group -->
+                
+                <!-- form group -->
+                <div class="mb-3 col-12 col-md-12">
+                  <div class="card bg-light" style="border:2px solid #DBDBDB; cursor: pointer;">
+                    <div class=" py-3 ms-3 me-3 mb-0 mt-2">
+                      <h4 class="mn-0">1 miejsce w rankingu ‍🥇 <span class="badge bg-dark rounded-pill ml-1">Twoja rezerwacja - oczekuje</span> </h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- form group -->
+                
+                <!-- form group -->
+                <div class="mb-3 col-12 col-md-12">
+                  <div class="card bg-light" style="border:2px solid #DBDBDB; cursor: pointer;">
+                    <div class=" py-3 ms-3 me-3 mb-0 mt-2">
+                      <h4 class="mn-0">1 miejsce w rankingu ‍🥇 <span class="badge bg-dark rounded-pill ml-1">Twoja rezerwacja - oczekuje</span> </h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- form group -->
+                
+                <!-- form group -->
+                <div class="mb-3 col-12 col-md-12">
+                  <div class="card bg-light" style="border:2px solid #DBDBDB; cursor: pointer;">
+                    <div class=" py-3 ms-3 me-3 mb-0 mt-2">
+                      <h4 class="mn-0">1 miejsce w rankingu ‍🥇 <span class="badge bg-dark rounded-pill ml-1">Twoja rezerwacja - oczekuje</span> </h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- form group -->
+                
+                
+              </div>
+            </div>
+          </div>
+          
+          
+          <!-- background color -->
+          <div class="col-lg-6">
+            <div class="px-1 px-xl-8 py-4 py-lg-0">
+              <!-- form section -->
+              <div id="form">
+                <!-- form row -->
+                <form class="row mt-5">
+                  
+                  <!--
+                  <div class="mb-3 col-12">
+                    <div class="alert alert-danger" role="alert">
+                      Opłać zamówienie by wyświetlić swoją wizytówkę <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                    </div>
+                  </div> -->
+                  
+                  <div class="mb-3 col-12 col-md-12">
+                    <h4><u>Podgląd Twojej wizytówki:</u></h4>
+                  </div>
+                  
+                  
+                  <div class="mb-2">
+                    <h2 class="mb-2">Immobooking.pl</h2>
+                    <div class="mt-2">
+                      <!-- Img  -->
+                      
+                      <img src="https://toprankingi.com/media/profile-pictures/4_p2rtqhr.jpg" alt="" class="img-fluid me-4 rounded-3 d-none d-lg-block d-md-block">
+                      
+                      <div class="mt-3">
+                        
+                        <p>Immobooking portal z opcją propozycji własnej ceny nieruchomości. Zaprezentuj swoją nieruchomość, bądź wyszukaj ogłoszenie mieszkań, domów, lokali biznesowych i innych nieruchomości w całej Polsce. Jak działa ImmoBooking? ImmoBooking to wiodący serwis z nieruchomościami na sprzedaż i wynajem na terenie Polski, w każdym zakątku kraju.</p>
+                        
+                        <p>ImmoBooking to jedna z najlepszych stron internetowych do sprzedaży nieruchomości. Na nasze mieszkanie znaleźliśmy kupującego w przeciągu zaledwie dwóch tygodni. Jesteśmy zadowoleni oraz z całego serca polecamy korzystanie z tej strony!</p>
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </section>
+    </main>
+    
+    <!-- Libs JS -->
+    <script src="{% static 'assets_overview/libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/simplebar/dist/simplebar.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+    
+    
+    <!-- Theme JS -->
+    <script src="{% static 'assets_overview/js/theme.min.js' %}"></script>
+    
+  </body>
+  
+</html>
+{% endspaceless %}

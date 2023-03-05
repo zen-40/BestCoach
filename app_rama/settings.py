@@ -46,6 +46,9 @@ INSTALLED_APPS = [
     'authentication',
     'imagekit',
     'overview_app',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -166,3 +169,7 @@ ACCOUNT_UNIQUE_EMAIL = True
 # ocpjonalnie emaillogin_project/settings.py
 LOGIN_REDIRECT_URL = 'app:home' #redirect
 ACCOUNT_LOGOUT_REDIRECT_URL = 'app:home' #rediect
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'

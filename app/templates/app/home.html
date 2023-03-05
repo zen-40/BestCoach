@@ -28,12 +28,14 @@
         border-radius: 100%
       }
       
-      .hovernow {
-        transition: box-shadow 0.3s ease-in-out;
-      }
-      
-      .hovernow:hover {
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+      @media screen and (min-width: 800px) {
+        .hovernow {
+          transition: box-shadow 0.3s ease-in-out;
+        }
+        
+        .hovernow:hover {
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+        }
       }
       
     </style>
@@ -53,6 +55,9 @@
           <div class="container-fluid max-w-screen-sm vstack gap-6">
             <!-- Profile picture -->
             
+            <div class="row g-6">
+              
+              <div class="col-12">
             <!-- Column -->
             <div class="card" style="border-top: 4px solid #5c60f5;">
               <img class="card-img-top" src="{% static 'img/590x155/7.jpg' %}" alt="Card image cap" style="height:130px;">
@@ -81,6 +86,8 @@
               </div>
             </div>
             
+            </div>
+            </div>
             
             <!-- Individual switch cards -->
             <div class="row g-6">
@@ -89,7 +96,7 @@
                 <div class="card hovernow" style="border:2px solid #e6e6e6; ">
                   <div class="card-body text-center">
                     <figure class="mx-auto">
-                      <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/1a.png' %}"></div>
+                      <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/8i.png' %}"></div>
                     </figure>
                     
                     <!-- Desktop -->
@@ -116,7 +123,7 @@
                 <div class="card hovernow" style="border:2px solid #e6e6e6;">
                   <div class="card-body text-center">
                     <figure class="mx-auto">
-                      <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/3a.png' %}"></div>
+                      <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/10i.png' %}"></div>
                     </figure>
                     
                     <!-- Desktop -->
@@ -144,7 +151,7 @@
                 <div class="card hovernow" style="border:2px solid #e6e6e6;">
                   <div class="card-body text-center">
                     <figure class="mx-auto">
-                      <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/2a.png' %}"></div>
+                      <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/7i.png' %}"></div>
                     </figure>
                     
                     <!-- Desktop -->
@@ -171,7 +178,7 @@
                 <div class="card hovernow" style="border:2px solid #e6e6e6;">
                   <div class="card-body text-center">
                     <figure class="mx-auto">
-                      <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/4a.png' %}"></div>
+                      <div class="w-16 mx-auto mt-4"><img alt="..." class="w-full mb-5" src="{% static 'img/900x900/13i.png' %}"></div>
                     </figure>
                     
                     <!-- Desktop -->
@@ -195,6 +202,69 @@
               </div>
               
               
+            </div>
+            
+            <div class="row g-6">
+              <div class="col-12">
+                <div class="card h-full" style="border:2px solid #e6e6e6; ">
+                  <div class="card-body">
+                    <div class="card-title d-flex align-items-center">
+                      <h5 class="mb-0">Latest notifications</h5>
+                      <div class="ms-auto text-end"><a href="#" class="text-sm font-semibold">See all</a></div>
+                    </div>
+                    <div class="list-group gap-4">
+                      <div class="list-group-item d-flex align-items-center border rounded">
+                        <div class="me-4">
+                          <div class="avatar">
+                            <img alt="..." src="{% static 'img/900x900/junk-food.png' %}">
+                          </div>
+                        </div>
+                        <div class="flex-fill">
+                          <a href="#" class="d-block h6 font-semibold mb-1">Limit highly processed foods.</a>
+                          <span class="d-block text-sm text-muted">17 minutes ago</span>
+                        </div>
+                        <div class="ms-auto text-end">
+                          <div class="dropdown"><a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-three-dots-vertical"></i></a>
+                            <div class="dropdown-menu"><a href="#!" class="dropdown-item">Action </a><a href="#!" class="dropdown-item">Another action </a><a href="#!" class="dropdown-item">Something else here</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item d-flex align-items-center border rounded">
+                        <div class="me-4">
+                          <div class="avatar">
+                            <img alt="..." src="{% static 'img/900x900/bottle.png' %}">
+                          </div>
+                        </div>
+                        <div class="flex-fill">
+                          <a href="#" class="d-block h6 font-semibold mb-1">Water consumption at the right level.</a>
+                          <span class="d-block text-sm text-muted">1 day ago</span>
+                        </div>
+                        <div class="ms-auto text-end">
+                          <div class="dropdown"><a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-three-dots-vertical"></i></a>
+                            <div class="dropdown-menu"><a href="#!" class="dropdown-item">Action </a><a href="#!" class="dropdown-item">Another action </a><a href="#!" class="dropdown-item">Something else here</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item d-flex align-items-center border rounded">
+                        <div class="me-4">
+                          <div class="avatar">
+                            <img alt="..." src="{% static 'img/900x900/schedule.png' %}">
+                          </div>
+                        </div>
+                        <div class="flex-fill">
+                          <a href="#" class="d-block h6 font-semibold mb-1">Add a weekly summary.</a>
+                          <span class="d-block text-sm text-muted">3 days ago</span>
+                        </div>
+                        <div class="ms-auto text-end">
+                          <div class="dropdown"><a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-three-dots-vertical"></i></a>
+                            <div class="dropdown-menu"><a href="#!" class="dropdown-item">Action </a><a href="#!" class="dropdown-item">Another action </a><a href="#!" class="dropdown-item">Something else here</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             
           </div>

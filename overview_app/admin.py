@@ -1,9 +1,8 @@
 from django.contrib import admin
-from .models import CmsBenefit, CmsReviews, CmsFaq, SimpleCms
+from .models import Contact, Article, ArticleList, TermsAndConditions
 
 
-
-admin.site.register(CmsBenefit)
-admin.site.register(CmsReviews)
-admin.site.register(CmsFaq)
-admin.site.register(SimpleCms)
+admin.site.register(Contact)
+admin.site.register(Article)
+admin.site.register(ArticleList)
+admin.site.register(TermsAndConditions)

@@ -1,0 +1,163 @@
+{% spaceless %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="BestCoach.app - Best application for personal trainers">
+    <meta name="keywords" content="BestCoach.app - Best application for personal trainers">
+    <meta name="author" content="BestCoach.app">
+    
+    <!-- Favicon icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets_overview/images/favicon/icon.png' %}">
+    
+    
+    <!-- Libs CSS -->
+    <link href="{% static 'assets_overview/fonts/feather/feather.css' %}" rel="stylesheet">
+    <link href="{% static 'assets_overview/libs/bootstrap-icons/font/bootstrap-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets_overview/libs/@mdi/font/css/materialdesignicons.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets_overview/libs/simplebar/dist/simplebar.min.css' %}" rel="stylesheet">
+    
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'assets_overview/css/theme.min.css' %}">
+    <link href="{% static 'assets_overview/libs/tiny-slider/dist/tiny-slider.css' %}" rel="stylesheet">
+    <title>BestCoach.app - Application features overview </title>
+  </head>
+  
+  <body class="bg-white">
+    <!-- Page content -->
+    <main class="mb-0">
+      <!-- navbar login -->
+      {% include "overview_app/basic/navbar.html" %}
+      
+      <!-- Content -->
+      <section class="py-4 py-lg-8 pb-14">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-8 col-md-12 col-12 mb-2">
+              <div class="text-center mb-4">
+                <a href="#" class="fs-5 fw-semi-bold d-block mb-4 text-primary">{{ obj.category }}</a>
+                <h1 class="display-3 fw-bold mb-4">{{ obj.name }}</h1>
+                <span class="mb-3 d-inline-block">{{ obj.created_at }}</span>
+              </div>
+            </div>
+          </div>
+          {% if obj.basic_img %}
+          <div class="row justify-content-center">
+            <!-- Image -->
+            <div class="col-xl-10 col-lg-10 col-md-12 col-12 mb-6">
+              <img src="{{ obj.basic_img.url }}" alt="" class="img-fluid rounded-3 w-100">
+            </div>
+          </div>
+          {% endif %}
+          <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-8 col-md-12 col-12 mb-2">
+              <!-- Descriptions -->
+              <div>
+                <div class="mb-4">
+                  <p class="lead text-dark">
+                    {{ obj.content|safe }}
+                  </p>
+                </div>
+                
+                
+                {% for sub_article in obj.articlelist_set.all %}
+                <hr class="mt-lg-6 mb-lg-6 my-md-6">
+                <!-- Img alignment -->
+                <div class="mb-5">
+                  <h2 class="mb-2">{{ sub_article.name }}</h2>
+                  {% if sub_article.content %}
+                  <p>
+                    {{ sub_article.content|linebreaks }}
+                  </p>
+                  {% endif %}
+
+                  <div class="mt-4">
+                    <!-- Img  -->
+                    {% if sub_article.image %}
+                    <img src="{{ sub_article.image.url }}" alt="" class="img-fluid me-4 rounded-3" />
+                    {% endif %}
+                    
+                    {% if sub_article.logo %}
+                    <img src="{{ sub_article.logo.url }}" alt="" class="me-4 rounded-3" style="height: 45px;"/>
+                    {% endif %}
+                    
+                    {% if sub_article.description %}
+                    <div>
+                      <p>
+                        {{ sub_article.description|safe }}
+                      </p>
+                    </div>
+                    {% endif %}
+                    
+                  </div>
+                </div>
+                {% endfor %}
+                
+              </div>
+              
+              <!-- Media -->
+              <hr class="mt-8 mb-5">
+              <div class="d-flex justify-content-between align-items-center mb-5">
+                <div class="d-flex align-items-center">
+                  <img src="{{ obj.author_img.url }}" alt="" class="rounded-circle avatar-md">
+                  <div class="ms-2 lh-1">
+                    <h5 class="mb-1 ">{{ obj.author }}</h5>
+                    <span class="text-primary">Administrator</span>
+                  </div>
+                </div>
+                <div>
+                  <span class="ms-2 text-muted">Last edit time: <b class="text-primary">{{ obj.created_at }}</b></span>
+                </div>
+              </div>
+              <!-- Subscribe to Newsletter -->
+              <div class="py-15">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="text-center mb-4">
+                      <h2 class="display-4 fw-bold mb-3">Vote for new features 👍!</h2>
+                      <p class="mb-0 lead">The purpose of our application is to facilitate your daily work as a personal trainer. Choose what new features we should implement or vote for the ones currently selected by users.</p>
+                    </div>
+                    <!-- Form -->
+                    <div class="row text-center">
+                      <div class="mb-3">
+                        <a class="btn btn-primary btn-lg" href="{% url 'overview_app:vote_for_news' %}">Go to vote <i class="bi bi-arrow-right-short"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    
+    <!-- Footer -->
+    {% include "overview_app/basic/footer.html" %}
+    
+    <!-- Libs JS -->
+    <script src="{% static 'assets_overview/libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/simplebar/dist/simplebar.min.js' %}"></script>
+    
+    
+    <!-- Theme JS -->
+    <script src="{% static 'assets_overview/js/theme.min.js' %}"></script>
+    
+    
+    <script src="{% static 'assets_overview/libs/tiny-slider/dist/min/tiny-slider.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/@popperjs/core/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/tippy.js/dist/tippy-bundle.umd.min.js' %}"></script>
+    <script src="{% static 'assets_overview/js/vendors/tnsSlider.js' %}"></script>
+    <script src="{% static 'assets_overview/js/vendors/tooltip.js' %}"></script>
+    
+  </body>
+  
+</html>
+{% endspaceless %}

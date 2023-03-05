@@ -1,0 +1,98 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<nav class="navbar navbar-expand-lg navbar-default shadow-none">
+  <div class="container px-0">
+    <a class="navbar-brand" href="{% url 'overview_app:home' %}">
+      <img src="{% static 'assets_overview/images/brand/logo/logo.svg' %}" alt="BestCoach.app - Logo">
+    </a>
+    
+    <!-- Button -->
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar top-bar mt-0"></span>
+      <span class="icon-bar middle-bar"></span>
+      <span class="icon-bar bottom-bar"></span>
+    </button>
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbar-default">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'overview_app:functions' %}">
+            App functionalities
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'overview_app:contact' %}">
+            Contact
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'overview_app:vote_for_news' %}">
+            Vote for news
+          </a>
+        </li>
+        
+      </ul>
+      
+      <div class="ms-auto mt-3 mt-lg-0">
+        <div class="d-flex align-items-center">
+          <a href="{% url 'app:home' %}" class="btn btn-light shadow-sm me-1">Application preview <i class="bi bi-eye ms-1"></i></a>
+          <a href="#" class="btn btn-primary ms-1" data-bs-toggle="modal" data-bs-target="#contactModal">Get started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Get started now!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form method="POST">
+        {% csrf_token %}
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <p>Fill out the form below and our employee will call you and present the details and functionality of our application.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              {{ form.name|as_crispy_field }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              {{ form.phone|as_crispy_field }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              {{ form.data|as_crispy_field }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  I cccepts the regulations and conditions
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" name="buttonSend">Send <i class="bi bi-send-check"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

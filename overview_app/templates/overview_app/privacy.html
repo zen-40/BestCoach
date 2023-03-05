@@ -1,0 +1,95 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="pl">
+  
+  <head> <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="BestCoach.app - Best application for personal trainers">
+    <meta name="keywords" content="BestCoach.app - Best application for personal trainers">
+    <meta name="author" content="BestCoach.app">
+    
+    
+    <!-- Favicon icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets_overview/images/favicon/icon.png' %}">
+    
+    
+    <!-- Libs CSS -->
+    <link href="{% static 'assets_overview/fonts/feather/feather.css' %}" rel="stylesheet">
+    <link href="{% static 'assets_overview/libs/bootstrap-icons/font/bootstrap-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets_overview/libs/@mdi/font/css/materialdesignicons.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets_overview/libs/simplebar/dist/simplebar.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets_overview/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+    
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'assets_overview/css/theme.min.css' %}">
+    <title>BestCoach.app - Privacy policy</title>
+  </head>
+  
+  <body class="bg-white">
+    <!-- Page Content -->
+    <!-- Navbar -->
+    <!-- navbar login -->
+    <!-- navbar login -->
+    {% include "overview_app/basic/navbar.html" %}
+    
+    <main>
+      <!-- pageheader -->
+      <section class="py-10">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-12 col-12">
+              <!-- text center -->
+              <div class="text-center">
+                <h1 class="display-3 fw-bold">Privacy policy</h1>
+                <p class="lead px-8">Please read our privacy policy before using our website.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- content -->
+      <section class="pb-10">
+        <div class="container">
+          <div class="row justify-content-center">
+            
+            
+            <div class="col-lg-8 col-md-12 col-12">
+              <!-- date -->
+              <div class="py-3 mb-5 border-bottom">
+                <h3>Last modification: <span class="text-primary">{{ obj.updated_at }}</span></h3>
+              </div>
+              <!-- para -->
+              <p class="fs-4 mb-4">
+              
+                {{ obj.privacy|linebreaks }}
+                
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Scripts -->
+    <!-- footer -->
+    {% include "overview_app/basic/footer.html" %}
+    
+    
+    <!-- Scripts -->
+    <!-- Libs JS -->
+    <script src="{% static 'assets_overview/libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/simplebar/dist/simplebar.min.js' %}"></script>
+    <script src="{% static 'assets_overview/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+    
+    
+    <!-- Theme JS -->
+    <script src="{% static 'assets_overview/js/theme.min.js' %}"></script>
+    
+    
+  </body>
+  
+</html>
