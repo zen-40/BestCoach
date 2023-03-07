@@ -43,7 +43,6 @@
             <div class="card mb-5" style="border:2px solid #e6e6e6;">
               <div class="card-header border-bottom d-flex align-items-center">
                 <h5 class="me-auto">Training A (Monday)</h5>
-                <span class="badge bg-soft-primary text-primary d-lg-none"><i class="bi bi-arrow-left-short"></i> <i class="bi bi-arrow-right-short"></i></span>
                 <div class="dropdown">
                   <a class="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="bi bi-three-dots-vertical"></i>
@@ -61,105 +60,93 @@
                   </div>
                 </div>
               </div>
-              <div class="table-responsive">
-                <table class="table table-hover table-nowrap">
-                  <thead class="table-light">
-                    <tr>
-                      <th scope="col">Name</th>
-                      <th scope="col">Series</th>
-                      <th scope="col">Repeat</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <img alt="..." src="{% static 'img/200x200/1.jpg' %}" class="avatar avatar-xl me-2">
-                        <a class="text-heading font-semibold" href="#" data-bs-toggle="modal" data-bs-target="#testVersionModal">
-                          Deadlift
-                        </a>
-                      </td>
-                      <td>
-                        4s
-                      </td>
-                      <td>
-                        10/10/8/8
-                      </td>
-                      <td class="text-end">
-                        <button type="button" class="btn btn-sm  btn-neutral"  data-bs-toggle="modal" data-bs-target="#testVersionModal">Play <i class="bi bi-play"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img alt="..." src="{% static 'img/200x200/2.jpg' %}" class="avatar avatar-xl me-2">
-                        <a class="text-heading font-semibold" href="#" data-bs-toggle="modal" data-bs-target="#testVersionModal">
-                          Dumbbell row
-                        </a>
-                      </td>
-                      <td>
-                        4s
-                      </td>
-                      <td>
-                        10/10/8/8
-                      </td>
-                      <td class="text-end">
-                        <button type="button" class="btn btn-sm btn-neutral"  data-bs-toggle="modal" data-bs-target="#testVersionModal">Play <i class="bi bi-play"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img alt="..." src="{% static 'img/200x200/3.jpg' %}" class="avatar avatar-xl me-2">
-                        <a class="text-heading font-semibold" href="#" data-bs-toggle="modal" data-bs-target="#testVersionModal">
-                          Incline dumbbell press
-                        </a>
-                      </td>
-                      <td>
-                        4s
-                      </td>
-                      <td>
-                        12/10/8
-                      </td>
-                      <td class="text-end">
-                        <button type="button" class="btn btn-sm btn-neutral"  data-bs-toggle="modal" data-bs-target="#testVersionModal">Play <i class="bi bi-play"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img alt="..." src="{% static 'img/200x200/4.jpg' %}" class="avatar avatar-xl me-2">
-                        <a class="text-heading font-semibold" href="#" data-bs-toggle="modal" data-bs-target="#testVersionModal">
-                          Military press
-                        </a>
-                      </td>
-                      <td>
-                        4s
-                      </td>
-                      <td>
-                        8/6/4
-                      </td>
-                      <td class="text-end">
-                        <button type="button" class="btn btn-sm btn-neutral"  data-bs-toggle="modal" data-bs-target="#testVersionModal">Play <i class="bi bi-play"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img alt="..." src="{% static 'img/200x200/5.jpg' %}" class="avatar avatar-xl me-2">
-                        <a class="text-heading font-semibold" href="#" data-bs-toggle="modal" data-bs-target="#testVersionModal">
-                          Grip barbell bench press
-                        </a>
-                      </td>
-                      <td>
-                        3s
-                      </td>
-                      <td>
-                        8/6/4
-                      </td>
-                      <td class="text-end">
-                        <button type="button" class="btn btn-sm btn-neutral"  data-bs-toggle="modal" data-bs-target="#testVersionModal">Play <i class="bi bi-play"></i></button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              
+              <div class="card-body">
+                <div class="vstack gap-6">
+                  <div class="d-flex align-items-center">
+                    <div class="me-3">
+                      <img alt="..." class="avatar avatar-xl me-2" src="{% static 'img/200x200/1.jpg' %}">
+                    </div>
+                    <div class="flex-1"><a href="#" class="d-block font-semibold text-sm text-heading text-primary-hover">Deadlift</a>
+                      <div class="text-xs text-muted line-clamp-1">(4s) 10/10/8/8</div>
+                    </div>
+                    <div class="ms-auto text-end">
+                      <button type="button" class="btn btn-sm btn-neutral" data-bs-toggle="modal" data-bs-target="#testVersionModal">
+                        <span class="d-none d-lg-block">
+                          Play
+                        </span>
+                        <i class="bi bi-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="me-3">
+                      <img alt="..." class="avatar avatar-xl me-2" src="{% static 'img/200x200/2.jpg' %}">
+                    </div>
+                    <div class="flex-1"><a href="#" class="d-block font-semibold text-sm text-heading text-primary-hover">Dumbbell row</a>
+                      <div class="text-xs text-muted line-clamp-1">(4s) 10/10/8/8</div>
+                    </div>
+                    <div class="ms-auto text-end">
+                      <button type="button" class="btn btn-sm btn-neutral" data-bs-toggle="modal" data-bs-target="#testVersionModal">
+                        <span class="d-none d-lg-block">
+                          Play
+                        </span>
+                        <i class="bi bi-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="me-3">
+                      <img alt="..." class="avatar avatar-xl me-2" src="{% static 'img/200x200/3.jpg' %}">
+                    </div>
+                    <div class="flex-1"><a href="#" class="d-block font-semibold text-sm text-heading text-primary-hover">Incline dumbbell press</a>
+                      <div class="text-xs text-muted line-clamp-1">(4s) 12/10/8</div>
+                    </div>
+                    <div class="ms-auto text-end">
+                      <button type="button" class="btn btn-sm btn-neutral" data-bs-toggle="modal" data-bs-target="#testVersionModal">
+                        <span class="d-none d-lg-block">
+                          Play
+                        </span>
+                        <i class="bi bi-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="me-3">
+                      <img alt="..." class="avatar avatar-xl me-2" src="{% static 'img/200x200/4.jpg' %}">
+                    </div>
+                    <div class="flex-1">
+                      <a href="#" class="d-block font-semibold text-sm text-heading text-primary-hover">Military press</a>
+                      <div class="text-xs text-muted line-clamp-1">(4s) 8/6/4</div>
+                    </div>
+                    <div class="ms-auto text-end">
+                      <button type="button" class="btn btn-sm btn-neutral" data-bs-toggle="modal" data-bs-target="#testVersionModal">
+                        <span class="d-none d-lg-block">
+                          Play
+                        </span>
+                        <i class="bi bi-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="me-3">
+                      <img alt="..." class="avatar avatar-xl me-2" src="{% static 'img/200x200/5.jpg' %}">
+                    </div>
+                    <div class="flex-1"><a href="#" class="d-block font-semibold text-sm text-heading text-primary-hover">Grip barbell bench press</a>
+                      <div class="text-xs text-muted line-clamp-1">(3s) 8/6/4</div>
+                    </div>
+                    <div class="ms-auto text-end">
+                      <button type="button" class="btn btn-sm btn-neutral" data-bs-toggle="modal" data-bs-target="#testVersionModal">
+                        <span class="d-none d-lg-block">
+                          Play
+                        </span>
+                        <i class="bi bi-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
+              
               <div class="card-footer border-0 py-5">
                 <span class="text-muted text-sm">Intervals between breaks of 2-3 minutes for large muscle parts and 1-2 for small muscle parts.</span>
               </div>
