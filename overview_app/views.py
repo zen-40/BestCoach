@@ -46,6 +46,21 @@ def contact(request):
 
 
 
+def pricing(request):
+    #contact form
+    if request.method == 'POST' and 'buttonSend' in request.POST:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            request.session['send'] = 'Thank you, the form has been completed correctly. Wait for our employee to contact you.'
+            return HttpResponseRedirect(reverse('overview_app:home'))
+    else:
+        form = ContactForm()
+
+    context = {'form': form}
+    return render(request, 'overview_app/pricing.html', context)
+
+
 def functions(request):
     #functions
     obj = Article.objects.last()
