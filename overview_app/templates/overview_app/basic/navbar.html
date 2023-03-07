@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg navbar-default shadow-none">
   <div class="container px-0">
     <a class="navbar-brand" href="{% url 'overview_app:home' %}">
-      <img src="{% static 'assets_overview/images/brand/logo/logo.svg' %}" alt="BestCoach.app - Logo">
+      <img src="{% static 'img/logos/logo_4.png' %}" alt="BestCoach.app - Logo" style="height: 41px;">
     </a>
     
     <!-- Button -->
@@ -37,7 +37,7 @@
         
         <li class="nav-item">
           <a class="nav-link" href="{% url 'overview_app:vote_for_news' %}">
-            Voting 👍
+            👍 Voting
           </a>
         </li>
         
@@ -45,6 +45,7 @@
       
       <div class="ms-auto mt-3 mt-lg-0">
         <div class="d-flex align-items-center">
+          <a href="{% url 'app:home' %}" class="btn btn-light me-2">App preview</a>
           <a href="#" class="btn btn-primary ms-1" data-bs-toggle="modal" data-bs-target="#contactModal">Get started</a>
         </div>
       </div>
