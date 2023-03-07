@@ -18,7 +18,7 @@
         
         <li class="nav-item">
           <a class="nav-link" href="{% url 'overview_app:functions' %}">
-            App functionalities
+            Functions
           </a>
         </li>
         
@@ -30,7 +30,14 @@
         
         <li class="nav-item">
           <a class="nav-link" href="{% url 'overview_app:vote_for_news' %}">
-            Vote for news
+            Pricing
+          </a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'overview_app:vote_for_news' %}">
+            Voting 👍
           </a>
         </li>
         
@@ -38,7 +45,6 @@
       
       <div class="ms-auto mt-3 mt-lg-0">
         <div class="d-flex align-items-center">
-          <a href="{% url 'app:home' %}" class="btn btn-light shadow-sm me-1">Application preview <i class="bi bi-eye ms-1"></i></a>
           <a href="#" class="btn btn-primary ms-1" data-bs-toggle="modal" data-bs-target="#contactModal">Get started</a>
         </div>
       </div>
@@ -51,7 +57,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Get started now!</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Get video presentations!</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form method="POST">
@@ -90,7 +96,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary" name="buttonSend">Send <i class="bi bi-send-check"></i></button>
+          <button type="submit" class="btn btn-primary" name="buttonSend">Send form<i class="bi bi-send-check"></i></button>
         </div>
       </form>
     </div>

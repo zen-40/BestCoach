@@ -28,6 +28,15 @@
     <link rel="stylesheet" href="{% static 'assets_overview/css/theme.min.css' %}">
     <link href="{% static 'assets_overview/libs/tiny-slider/dist/tiny-slider.css' %}" rel="stylesheet">
     <title>BestCoach.app - Best application for personal trainers </title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1EXNB7BNC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-L1EXNB7BNC');
+    </script>
   </head>
   
   <body class="bg-white">
@@ -53,7 +62,8 @@
                 <!-- Form -->
                 <div class="row">
                   <div class="col-12 text-center">
-                    <button class="btn btn-dark btn-lg" type="button"  data-bs-toggle="modal" data-bs-target="#contactModal">Get started now!</button>
+                    <a class="btn btn-secondary " href="{% url 'app:home' %}">Application preview <i class="bi bi-eye"></i></a>
+                    <button class="btn btn-primary ms-2" type="button"  data-bs-toggle="modal" data-bs-target="#contactModal">Get started now <i class="bi bi-arrow-right-short"></i></button>
                   </div>
                 </div>
                 
@@ -113,7 +123,7 @@
               <!-- row -->
               <div class="row">
                 <div class="col-lg-9 col-md-12 col-12 mb-8">
-                  <h2 class="mb-3 display-4 fw-bold">Simple and efficient tool for growth your business
+                  <h2 class="mb-3 display-4 fw-bold">Efficient tool for growth your personal trainer business
                   </h2>
                   <p class="h2 text-muted">Discover the basic benefits that you will gain by using our application.</p>
                 </div>
@@ -216,12 +226,12 @@
                           <!-- img-->
                           <div class="d-flex align-items-center">
                             <div>
-                              <img src="{% static 'assets_overview/images/avatar/avatar-1.jpg' %}" alt="" class="avatar avatar-lg rounded-circle">
+                              <img src="{% static 'assets_overview/images/avatar/1.jpg' %}" alt="" class="avatar avatar-lg rounded-circle">
                             </div>
                             <!-- text -->
                             <div class="ms-3">
-                              <h4>Tim T. Cross<span class="text-info"> /</span>
-                                <span class="text-muted">@timcross</span>
+                              <h4>James Brown<span class="text-info"> /</span>
+                                <span class="text-muted">6 years of experience in the industry</span>
                               </h4>
                             </div>
                           </div>
@@ -235,12 +245,12 @@
                           <!-- Img -->
                           <div class="d-flex align-items-center">
                             <div>
-                              <img src="{% static 'assets_overview/images/avatar/avatar-4.jpg' %}" alt="" class="avatar avatar-lg rounded-circle">
+                              <img src="{% static 'assets_overview/images/avatar/7.jpg' %}" alt="" class="avatar avatar-lg rounded-circle">
                             </div>
                             <!-- Text -->
                             <div class="ms-3">
-                              <h4>Bernhard<span class="text-info"> /</span>
-                                <span class="text-muted">@xyz</span>
+                              <h4>John Taylor<span class="text-info"> /</span>
+                                <span class="text-muted">11 years of experience in the industry</span>
                               </h4>
                             </div>
                           </div>
@@ -254,11 +264,11 @@
                           <!-- Img -->
                           <div class="d-flex align-items-center">
                             <div>
-                              <img src="{% static 'assets_overview/images/avatar/avatar-5.jpg' %}" alt="" class="avatar avatar-lg rounded-circle">
+                              <img src="{% static 'assets_overview/images/avatar/1.jpg' %}" alt="" class="avatar avatar-lg rounded-circle">
                             </div>
                             <!-- Text -->
                             <div class="ms-3">
-                              <h4>Ali<span class="text-info"> /</span> <span class="text-muted">@xyz</span></h4>
+                              <h4>Joseph Wilson<span class="text-info"> /</span> <span class="text-muted">3 years of experience in the industry</span></h4>
                             </div>
                           </div>
                         </div>
@@ -272,12 +282,12 @@
                           <!-- img-->
                           <div class="d-flex align-items-center">
                             <div>
-                              <img src="{% static 'assets_overview/images/avatar/avatar-1.jpg' %}" alt="" class="avatar avatar-lg rounded-circle">
+                              <img src="{% static 'assets_overview/images/avatar/8.jpg' %}" alt="" class="avatar avatar-lg rounded-circle">
                             </div>
                             <!-- text -->
                             <div class="ms-3">
-                              <h4>Tim T. Cross<span class="text-info"> /</span>
-                                <span class="text-muted">@timcross</span>
+                              <h4>Christopher Martin<span class="text-info"> /</span>
+                                <span class="text-muted">15 years of experience in the industry</span>
                               </h4>
                             </div>
                           </div>
@@ -291,12 +301,12 @@
                           <!-- Img -->
                           <div class="d-flex align-items-center">
                             <div>
-                              <img src="{% static 'assets_overview/images/avatar/avatar-4.jpg' %}" alt="" class="avatar avatar-lg rounded-circle">
+                              <img src="{% static 'assets_overview/images/avatar/avatar-20.jpg' %}" alt="" class="avatar avatar-lg rounded-circle">
                             </div>
                             <!-- Text -->
                             <div class="ms-3">
-                              <h4>Bernhard<span class="text-info"> /</span>
-                                <span class="text-muted">@xyz</span>
+                              <h4>Olivia Clark<span class="text-info"> /</span>
+                                <span class="text-muted">7 years of experience in the industry</span>
                               </h4>
                             </div>
                           </div>
@@ -330,15 +340,14 @@
                     stay in the loop.
                   </p>
                   <!-- Row -->
-                  <form class="row">
-                    <div class="mb-3 col-md-7 col-12">
-                      <input type="email" class="form-control" placeholder="Work Email" required=""  data-bs-toggle="modal" data-bs-target="#contactModal">
+                  <div class="row">
+                    <div class="col-12">
+                      <!-- Button -->
+                      <div class="d-grid mb-3 col-md-5 col-12 ps-md-0">
+                        <button class="btn btn-primary" type="button"  data-bs-toggle="modal" data-bs-target="#contactModal">Request Access</button>
+                      </div>
                     </div>
-                    <!-- Button -->
-                    <div class="d-grid mb-3 col-md-5 col-12 ps-md-0">
-                      <button class="btn btn-primary" type="button"  data-bs-toggle="modal" data-bs-target="#contactModal">Request Access</button>
-                    </div>
-                  </form>
+                  </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1 p-0 overflow-hidden rounded-end-md shadow-lg">
                   <!-- Img -->

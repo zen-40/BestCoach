@@ -82,3 +82,7 @@ def settings_notifications(request):
                'template_name': template_name}
     return render(request, 'app/settings_notifications.html', context)
 
+
+
+def sample(request):
+    return render(request, 'app/sample.html')
